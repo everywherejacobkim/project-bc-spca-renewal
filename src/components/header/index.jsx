@@ -50,7 +50,7 @@ const Header = () => {
               href="/events"
               className="px-2 py-1 block hover:text-gray-500"
             >
-              Contact Us
+              News & Events
             </Link>
           </li>
         </ul>
