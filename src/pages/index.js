@@ -8,7 +8,7 @@ import testImage4 from "../../public/assets/images/test4.jpg";
 import testImage5 from "../../public/assets/images/test5.jpg";
 import ImageList from "@/components/list/ImageList";
 import LocationSearchBar from "@/components/searchBar/LocationSearchBar";
-
+import Cards from "@/components/cards";
 
 export default function Home() {
 
@@ -36,6 +36,8 @@ export default function Home() {
             </div>
             <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
             You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />
+
+            <Cards />
           </div>
       <Footer />
     </div>
