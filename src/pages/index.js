@@ -3,22 +3,35 @@ import Footer from "@/components/footer";
 import MainJumbotron from "@/components/jumbotron/MainJumbotron";
 import testImage from "../../public/assets/images/test.jpg";
 import testImage2 from "../../public/assets/images/test2.jpg";
+import testImage3 from "../../public/assets/images/test3.jpg";
+import testImage4 from "../../public/assets/images/test4.jpg";
+import testImage5 from "../../public/assets/images/test5.jpg";
+import ImageList from "@/components/list/ImageList";
 
 export default function Home() {
+
+  const images = [
+    testImage3,
+    testImage4,
+    testImage5,
+  ]
+
   return (
     <div>
       <Header />
-        <main className="flex min-h-screen flex-col items-center justify-between">
-          <div className="w-full items-center justify-center text-sm lg:flex-cols">
-          {/* Mount components here   */}
+          <div className="w-full items-center justify-center text-center text-sm lg:flex-cols">
+            {/*  Mount components here  */}
             <MainJumbotron title="Adopt, Don't Shop" description="Every adoption, every gift brings an animal closer to their best self. Become a hero - Save a life. Create a family." btnColor="bg-gray-700" image={testImage} imagePosition="right" />
-            
-            <br />
-
+            <div className="my-24">
+              <h1 className="text-5xl">Together we make a difference</h1>
+              <p className="mt-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div className="my-8">
+              <ImageList images={images}/>
+            </div>
             <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
             You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />
           </div>
-      </main>
       <Footer />
     </div>
   )
