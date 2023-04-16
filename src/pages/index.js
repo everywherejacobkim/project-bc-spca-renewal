@@ -39,10 +39,9 @@ export default function Home() {
             <CardBox />
             <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
             You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />
+
         <main className="flex min-h-screen flex-col items-center justify-between" />
           <div className="w-full items-center justify-center text-sm lg:flex">
-          {/* Mount components here   */}
-          
           </div>
       <Footer />
     </div>
