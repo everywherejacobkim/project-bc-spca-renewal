@@ -22,8 +22,9 @@ export default function Home() {
   return (
     <div>
       <Header />
-          <div className="w-full items-center justify-center text-center text-sm lg:flex-cols">
-            {/*  Mount components here  */}
+        <main className="flex min-h-screen flex-col items-center justify-between" />
+          <div className="w-full items-center justify-center text-sm lg:flex-cols">
+          {/* Mount components here   */}
             <MainJumbotron title="Adopt, Don't Shop" description="Every adoption, every gift brings an animal closer to their best self. Become a hero - Save a life. Create a family." btnColor="bg-gray-700" image={testImage} imagePosition="right" />
             <div className="my-24">
               <h1 className="text-5xl font-semibold">Together we make a difference</h1>
@@ -42,9 +43,9 @@ export default function Home() {
 
         <main className="flex min-h-screen flex-col items-center justify-between" />
           <div className="w-full items-center justify-center text-sm lg:flex">
+
           </div>
       <Footer />
     </div>
-  </div>
   )
 }
