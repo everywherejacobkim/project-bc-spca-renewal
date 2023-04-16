@@ -21,7 +21,7 @@ const CardBox = () => {
       <div className="flex flex-row flex-wrap justify-center gap-6  mx-12 ">
         {menuData.map((menu, index) => (
           <div key={index} className='border-2 p-5 rounded w-full md:w-1/2 lg:w-1/3 xl:w-1/4'>
-            <div className="flex items-center">
+            <div className="flex justify-center">
               {/** need to fix icon size*/}
               <Image
                 src={menu.imgUrl}
