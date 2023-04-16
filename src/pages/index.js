@@ -4,7 +4,7 @@ import MainJumbotron from "@/components/jumbotron/MainJumbotron";
 import testImage from "../../public/assets/images/test.jpg";
 import testImage2 from "../../public/assets/images/test2.jpg";
 import CardBox from "@/components/cards/cardBox";
-import Cards from "@/components/cards";
+
 
 export default function Home() {
   return (
@@ -21,8 +21,6 @@ export default function Home() {
 
             <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
             You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />
-
-            <Cards />
 
           </div>
       </main>
