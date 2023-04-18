@@ -8,7 +8,7 @@ import testImage4 from "../../public/assets/images/test4.jpg";
 import testImage5 from "../../public/assets/images/test5.jpg";
 import ImageList from "@/components/list/ImageList";
 import LocationSearchBar from "@/components/searchBar/LocationSearchBar";
-import CardBox from "@/components/cards/cardBox";
+import CardBox from "@/components/cardBox";
 
 
 export default function Home() {

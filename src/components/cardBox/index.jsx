@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React, { useState } from "react";
 
 function CardBtn() {
   return (
@@ -10,9 +9,9 @@ function CardBtn() {
 const CardBox = () => {
 
   const menuData = [
-    { title: 'Care for puppie', desc: 'Weve seen as increase in puppies comming through out doors in recent months', imgUrl: require("../../../../public/assets/icons/heart.png") },
-    { title: 'Adopt A Kennel', desc: 'You can help provide for their care by purchasing a plaque on one of our animal spaces', imgUrl: require("../../../../public/assets/icons/house.png") },
-    { title: 'Pet Food', desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../../../public/assets/icons/paw.png") }
+    { title: 'Care for puppie', desc: 'Weve seen as increase in puppies comming through out doors in recent months', imgUrl: require("../../../public/assets/icons/heart.png") },
+    { title: 'Adopt A Kennel', desc: 'You can help provide for their care by purchasing a plaque on one of our animal spaces', imgUrl: require("../../../public/assets/icons/house.png") },
+    { title: 'Pet Food', desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../../public/assets/icons/paw.png") }
   ];
 
   return (
