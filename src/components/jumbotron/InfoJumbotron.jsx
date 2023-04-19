@@ -1,22 +1,19 @@
 import React from "react";
 import classNames from "classnames";
 import Image from "next/image";
-import { ContentBlockA } from "./contentBlock/index";
+import { ContentBlockB } from "./contentBlock/index";
 
-const MainJumbotron = ({
+const InfoJumbotron = ({
   title,
   description,
   image,
   imagePosition = "left" | "right",
   bgColor,
-  fontColor,
-  btnColor,
-  btnTextColor,
 }) => {
   return (
     <div
       className={classNames(
-        "w-full px-4 py-8 md:px-20 md:py-32",
+        "w-full px-4 py-8 md:px-10 md:py-32",
         bgColor || "bg-gray-300"
       )}
     >
@@ -30,7 +27,7 @@ const MainJumbotron = ({
         )}
       >
         {image && (
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 mb-10 md:mb-0">
             <Image
               src={image}
               alt="image description"
@@ -39,12 +36,10 @@ const MainJumbotron = ({
             />
           </div>
         )}
-        <ContentBlockA
+        <ContentBlockB
           title={title}
           description={description}
-          fontColor={fontColor}
-          btnColor={btnColor}
-          btnTextColor={btnTextColor}
+          rootClass="font-semibold"
           className="w-full md:w-1/2"
         />
       </div>
@@ -52,4 +47,4 @@ const MainJumbotron = ({
   );
 };
 
-export default MainJumbotron;
+export default InfoJumbotron;

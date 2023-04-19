@@ -1,16 +1,28 @@
 import React from "react";
 import classNames from "classnames";
+import { MdNavigateNext } from "react-icons/md";
 
-const ContentBlock = ({ title, description, btnColor, btnTextColor }) => {
+// ContentBlockA has "Button" Button
+export const ContentBlockA = ({
+  title,
+  description,
+  fontColor,
+  btnColor,
+  btnTextColor,
+  rootClass,
+}) => {
   return (
-    <div className="w-1/2">
-      <h1 className="text-5xl tracking-wide font-bold mb-4">{title}</h1>
+    <div
+      className={classNames("md:w-1/2 text-left", fontColor || "text-black")}
+    >
+      <h1 className="text-4xl tracking-wide font-bold mb-4">{title}</h1>
       <p className="text-lg">{description}</p>
       <button
         className={classNames(
           "px-12 py-2.5 mt-8 rounded-full shadow-md",
           btnColor || "bg-black",
-          btnTextColor || "text-white"
+          btnTextColor || "text-white",
+          rootClass || ""
         )}
       >
         Button
@@ -19,4 +31,20 @@ const ContentBlock = ({ title, description, btnColor, btnTextColor }) => {
   );
 };
 
-export default ContentBlock;
+// ContentBlockB has "Learn more" Button
+export const ContentBlockB = ({ title, description, fontColor, rootClass }) => {
+  return (
+    <div
+      className={classNames("md:w-1/2 text-left", fontColor || "text-black")}
+    >
+      <h1 className="text-4xl tracking-wide font-bold mb-4">{title}</h1>
+      <p className="text-lg">{description}</p>
+      <button
+        className={classNames("flex items-center py-2.5 mt-8", rootClass || "")}
+      >
+        Learn more
+        <MdNavigateNext size={18} className="mt-0.5" />
+      </button>
+    </div>
+  );
+};
