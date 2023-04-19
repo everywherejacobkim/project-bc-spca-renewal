@@ -3,7 +3,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import ContentBlock from "./contentBlock";
 
-const MainJumbotron = ({
+const InfoJumbotron = ({
   title,
   description,
   image,
@@ -18,7 +18,7 @@ const MainJumbotron = ({
       className={classNames("w-full p-10 md:p-32", bgColor || "bg-gray-300")}
     >
       <div
-        className={classNames("flex flex-col gap-16 md:flex-row", {
+        className={classNames("flex flex-col gap-8 md:flex-row", {
           "md:flex-row-reverse": imagePosition === "right",
         })}
       >
@@ -35,7 +35,6 @@ const MainJumbotron = ({
         <ContentBlock
           title={title}
           description={description}
-          fontColor={fontColor}
           btnColor={btnColor}
           btnTextColor={btnTextColor}
           className="w-full md:w-1/2"
@@ -45,4 +44,4 @@ const MainJumbotron = ({
   );
 };
 
-export default MainJumbotron;
+export default InfoJumbotron;
