@@ -16,7 +16,7 @@ const MainJumbotron = ({
   return (
     <div
       className={classNames(
-        "w-full px-4 py-8 md:px-10 md:py-32",
+        "w-full px-4 py-8 md:px-20 md:py-32",
         bgColor || "bg-gray-300"
       )}
     >
