@@ -38,7 +38,7 @@ export default function Home() {
               <LocationSearchBar label="Find Volunteer Opportunities by Location" placeholder="Enter your postal code" />
             </div>
         </div>
-          <InfoJumbotron title="BC SPCA Mission" description="The mission of the British Columbia Society for the Prevention of Cruelty to Animals (BC SPCA) is to protect and enhance the quality of life for domestic, farm and wild animals in British Columbia. We assist more than 118,679 animals in need every year and are funded by compassionate animal lovers who support our work and partner with us to protect and enhance the quality of life for domestic, farm and wild animals in B.C." btnColor="bg-gray-700" image={testImage6} imagePosition="left" />
+          <InfoJumbotron title="BC SPCA Mission" description="The mission of the British Columbia Society for the Prevention of Cruelty to Animals (BC SPCA) is to protect and enhance the quality of life for domestic, farm and wild animals in British Columbia. We assist more than 118,679 animals in need every year and are funded by compassionate animal lovers who support our work and partner with us to protect and enhance the quality of life for domestic, farm and wild animals in B.C." image={testImage6} imagePosition="left" />
           <CardBox />
           <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
           You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />

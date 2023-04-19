@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Image from "next/image";
-import ContentBlock from "./contentBlock";
+import { ContentBlockA } from "./contentBlock/index";
 
 const MainJumbotron = ({
   title,
@@ -15,15 +15,22 @@ const MainJumbotron = ({
 }) => {
   return (
     <div
-      className={classNames("w-full p-10 md:p-32", bgColor || "bg-gray-300")}
+      className={classNames(
+        "w-full px-4 py-8 md:px-10 md:py-32",
+        bgColor || "bg-gray-300"
+      )}
     >
       <div
-        className={classNames("flex flex-col gap-16 md:flex-row", {
-          "md:flex-row-reverse": imagePosition === "right",
-        })}
+        className={classNames(
+          "flex flex-col gap-8 md:flex-row",
+          {
+            "md:flex-row-reverse": imagePosition === "right",
+          },
+          "items-center"
+        )}
       >
         {image && (
-          <div className="flex justify-center w-full md:w-1/2 mb-10 md:mb-0">
+          <div className="w-full md:w-1/2">
             <Image
               src={image}
               alt="image description"
@@ -32,7 +39,7 @@ const MainJumbotron = ({
             />
           </div>
         )}
-        <ContentBlock
+        <ContentBlockA
           title={title}
           description={description}
           fontColor={fontColor}

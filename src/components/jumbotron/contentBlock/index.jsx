@@ -1,7 +1,9 @@
 import React from "react";
 import classNames from "classnames";
+import { MdNavigateNext } from "react-icons/md";
 
-const ContentBlock = ({
+// ContentBlockA has "Button" Button
+export const ContentBlockA = ({
   title,
   description,
   fontColor,
@@ -10,7 +12,9 @@ const ContentBlock = ({
   rootClass,
 }) => {
   return (
-    <div className={classNames("w-1/2 text-left", fontColor || "text-black")}>
+    <div
+      className={classNames("md:w-1/2 text-left", fontColor || "text-black")}
+    >
       <h1 className="text-4xl tracking-wide font-bold mb-4">{title}</h1>
       <p className="text-lg">{description}</p>
       <button
@@ -27,4 +31,20 @@ const ContentBlock = ({
   );
 };
 
-export default ContentBlock;
+// ContentBlockB has "Learn more" Button
+export const ContentBlockB = ({ title, description, fontColor, rootClass }) => {
+  return (
+    <div
+      className={classNames("md:w-1/2 text-left", fontColor || "text-black")}
+    >
+      <h1 className="text-4xl tracking-wide font-bold mb-4">{title}</h1>
+      <p className="text-lg">{description}</p>
+      <button
+        className={classNames("flex items-center py-2.5 mt-8", rootClass || "")}
+      >
+        Learn more
+        <MdNavigateNext size={18} className="mt-0.5" />
+      </button>
+    </div>
+  );
+};
