@@ -12,6 +12,7 @@ import ImageList from "@/components/list/ImageList";
 import LocationSearchBar from "@/components/searchBar/LocationSearchBar";
 import CardBox from "@/components/cardBox";
 import SubscribeForm from "@/components/form/SubscribeForm";
+import StoryCard from "@/components/storiesCards";
 
 
 
@@ -43,6 +44,7 @@ export default function Home() {
           <CardBox />
           <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
           You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />
+          <StoryCard />
           <SubscribeForm title="Subscribe for BC SPCA Updates" description="Stay up to date on the news and events supporting animal welfare in B.C." placeholder="Email Address" />
       </div>
     <Footer />
