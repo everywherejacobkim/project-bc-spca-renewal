@@ -18,6 +18,10 @@ import StoryCard from "@/components/storiesCards";
 
 export default function Home() {
 
+  const storiesData = [
+    { title: 'Clementine', date: '2022-12-11', desc: 'Clementine is a British Shorthair. She was one of a litter of four kittens who were surrendered to us as a result of a cruelty investigation on July 16, 2022......', imgUrl: require("../../public/assets/images/test7.jpg") },
+    { title: 'Pippy', date: '2022-12-11', desc: 'Clementine is a British Shorthair. She was one of a litter of four kittens who were surrendered to us as a result of a cruelty investigation on July 16, 2022......', imgUrl: require("../../public/assets/images/test7.jpg") },
+  ]
 
   const cardData = [
     { title: 'Care for puppie', desc: 'Weve seen as increase in puppies comming through out doors in recent months', imgUrl: require("../../public/assets/icons/heart.png") },
@@ -51,7 +55,7 @@ export default function Home() {
           <CardBox cardData={cardData} textSize='text-base' textColor='text-black' btnTextColor='text-black' bgColor='bg-white'/>
           <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
           You can help local pets & win big!" btnColor="bg-gray-700" image={testImage2} imagePosition="left" />
-          <StoryCard />
+          <StoryCard storiesData={storiesData} textSize='text-base' textColor='text-black'  />
           <SubscribeForm title="Subscribe for BC SPCA Updates" description="Stay up to date on the news and events supporting animal welfare in B.C." placeholder="Email Address" />
       </div>
     <Footer />
