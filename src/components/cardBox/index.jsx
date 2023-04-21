@@ -1,35 +1,46 @@
 import Image from "next/image";
+import classNames from "classnames";
+
 
 function CardBtn() {
   return (
-    <button className='py-2 rounded-full border-2 w-24'>Button</button>
+    <div className="flex flex-row justify-start">
+      <button className='py-2 rounded-full border-2 w-24 text-center'>Button</button>
+    </div>
   )
 }
 
-const CardBox = () => {
+const CardBox = ({
+  cardData,
+  textSize,
+  textColor,
+  btnTextColor,
+  bgColor,
+}) => {
 
-  const menuData = [
-    { title: 'Care for puppie', desc: 'Weve seen as increase in puppies comming through out doors in recent months', imgUrl: require("../../../public/assets/icons/heart.png") },
-    { title: 'Adopt A Kennel', desc: 'You can help provide for their care by purchasing a plaque on one of our animal spaces', imgUrl: require("../../../public/assets/icons/house.png") },
-    { title: 'Pet Food', desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../../public/assets/icons/paw.png") }
-  ];
-
+  
   return (
     <div className='mx-auto sm:mx-8 md:mx-16 lg:mx-24 xl:mx-32 py-8'>
       <h2 className='text-2xl text-center pb-8'>How you can give to animals</h2>
-      <div className="flex flex-row flex-wrap justify-center gap-6  mx-12 ">
-        {menuData.map((menu, index) => (
-          <div key={index} className='border-2 p-5 rounded w-full md:w-1/2 lg:w-1/3 xl:w-1/4'>
-            <div className="flex justify-center">
+      <div className="flex flex-row flex-wrap justify-center gap-6  mx-2 ">
+        {cardData.map((data, index) => (
+          <div key={index} className={classNames(
+            'border-2 p-5 rounded w-full md:w-1/2 lg:w-1/3 xl:w-1/4',
+            bgColor || 'bg-blue'
+          )}>
+            <div className="flex justify-start">
               {/** need to fix icon size*/}
               <Image
-                src={menu.imgUrl}
+                src={data.imgUrl}
                 alt='icon'
+                width={20}
               />
 
-              <h3 className='pl-4 text-xl'>{menu.title}</h3>
+              <h3 className={classNames(
+                'pl-4',
+                textSize='text-xl')}>{data.title}</h3>
             </div>
-            <p className='py-6'>{menu.desc}</p>
+            <p className='py-6'>{data.desc}</p>
             <CardBtn />
           </div>
         ))}
