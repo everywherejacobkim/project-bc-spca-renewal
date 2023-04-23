@@ -7,7 +7,7 @@ const index = () => {
     <div>
       <Header />
       {/* Mount your component here */}
-      component
+      donation component
       <Footer />
     </div>
   );
