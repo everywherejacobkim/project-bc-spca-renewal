@@ -17,6 +17,9 @@ module.exports = {
         md: "768px",
         lg: "1024px",
       },
+      colors: {
+				"btn-primary": "#00337F",
+			},
     },
   },
   plugins: [],
