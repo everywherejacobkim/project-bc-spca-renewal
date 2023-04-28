@@ -1,8 +1,9 @@
 import React from "react";
+import classNames from "classnames";
 
-const SearchBar = () => {
+const SearchBar = ({ width }) => {
   return (
-    <div className="hidden md:block w-1/6 ml-4 p-2">
+    <div className={classNames("hidden md:block ml-4 p-2", width || "w-32")}>
       <input
         type="text"
         name="search"
