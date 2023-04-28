@@ -14,7 +14,7 @@ const InfoJumbotron = ({
     <div
       className={classNames(
         "w-full px-4 py-8 md:px-10 md:py-32",
-        bgColor || "bg-gray-300"
+        bgColor 
       )}
     >
       <div
