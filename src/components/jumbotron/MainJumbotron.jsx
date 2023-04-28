@@ -11,12 +11,13 @@ const MainJumbotron = ({
   bgColor,
   fontColor,
   btnColor,
+  btnText,
   btnTextColor,
 }) => {
   return (
     <div
       className={classNames(
-        "w-full px-4 py-8 md:px-20 md:py-32",
+        "w-full px-4 pt-8 md:px-20 md:pt-32",
         bgColor || "bg-gray-300"
       )}
     >
@@ -26,16 +27,16 @@ const MainJumbotron = ({
           {
             "md:flex-row-reverse": imagePosition === "right",
           },
-          "items-center"
+          "items-center md:mx-14 md:pl-2"
         )}
       >
         {image && (
-          <div className="w-full md:w-1/2">
+          <div>
             <Image
               src={image}
               alt="image description"
-              width={600}
-              height={600}
+              width={650}
+              height={650}
             />
           </div>
         )}
@@ -44,6 +45,7 @@ const MainJumbotron = ({
           description={description}
           fontColor={fontColor}
           btnColor={btnColor}
+          btnText={btnText}
           btnTextColor={btnTextColor}
           className="w-full md:w-1/2"
         />

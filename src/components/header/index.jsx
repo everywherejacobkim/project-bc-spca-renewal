@@ -13,8 +13,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-100 p-4">
-      <nav className="flex items-center justify-between max-w-6xl mx-auto px-4 py-3 md:px-10">
+    <header className="bg-white p-4">
+      <nav className="flex items-center justify-between max-w-6xl mx-auto px-4 py-3 md:pl-2">
         <Link href="/" className="text-3xl font-bold">
           <Image src={logo} alt="logo" width={140} />
         </Link>
@@ -28,7 +28,7 @@ const Header = () => {
         <ul
           className={`${
             isExpanded ? "block" : "hidden"
-          } md:flex md:items-center md:justify-end md:flex-1 md:gap-4`}
+          } md:flex md:items-center md:justify-end md:flex-1 md:gap-4 font-medium`}
         >
           <li>
             <Link href="/adopt" className="px-2 py-1 block hover:text-gray-500">

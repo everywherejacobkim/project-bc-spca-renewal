@@ -19,6 +19,9 @@ module.exports = {
       },
       colors: {
 				"btn-primary": "#00337F",
+        "gray-20": "#F0F0F0",
+        "gray-30": "#212121",
+        "skyblue-jumbotron": "#D4E6FF",
 			},
     },
   },

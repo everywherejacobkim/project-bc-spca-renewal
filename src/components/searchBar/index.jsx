@@ -1,14 +1,17 @@
 import React from "react";
 import classNames from "classnames";
 
-const SearchBar = ({ width }) => {
+const SearchBar = ({ width, bgColor }) => {
   return (
     <div className={classNames("hidden md:block ml-4 p-2", width || "w-32")}>
       <input
         type="text"
         name="search"
         id="search"
-        className="focus:ring-gray-500 focus:border-gray-500 block w-full p-2 sm:text-sm border border-black rounded-full"
+        className={classNames(
+          "w-full px-4 py-2 rounded-full text-sm bg-gray-300",
+          bgColor || "bg-gray-20"
+        )}
         placeholder="search"
       />
     </div>
