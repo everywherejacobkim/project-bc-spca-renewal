@@ -27,7 +27,7 @@ const CardBox = ({
           <div key={index} className={classNames(
             'border-2 p-5 rounded-3xl w-full md:w-1/2 lg:w-1/3 xl:w-1/4 hover:bg-light-blue',
             cardBgColor 
-            )}>,
+            )}>
              
             <div className={
               classNames(
@@ -43,7 +43,7 @@ const CardBox = ({
                   layout={"cover"}               
                 />
               <h3 className={classNames(
-                'pl-4 leading-9 border-1',
+                'pl-4 leading-9',
                 textSize='text-xl')}>{data.title}
               </h3>               
             </div>
