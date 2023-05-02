@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
 import SearchBar from "../searchBar";
+import logo from "../../../public/assets/logo/logo_bcspca.svg";
 
 const Header = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,7 +15,7 @@ const Header = () => {
     <header className="bg-gray-100 p-4">
       <nav className="flex items-center justify-between max-w-6xl mx-auto px-4 py-3">
         <Link href="/" className="text-3xl font-bold">
-          <div>BCSPCA</div>
+          <Image src={logo} alt="logo" width={140} />
         </Link>
         <button className="block md:hidden" onClick={toggleMenu}>
           {isExpanded ? (

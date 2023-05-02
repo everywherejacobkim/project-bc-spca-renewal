@@ -21,8 +21,10 @@ module.exports = {
         'primaryLight':'#165EC8',
         'gray20':'#F0F0F0',
         'light-blue':'#D4E6FF'
-        
-      }
+      },
+      colors: {
+				"btn-primary": "#00337F",
+			},
     },
   },
   plugins: [],
