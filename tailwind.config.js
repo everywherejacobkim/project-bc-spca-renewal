@@ -24,6 +24,8 @@ module.exports = {
       },
       colors: {
 				"btn-primary": "#00337F",
+        "white":'#ffffff',
+        
 			},
     },
   },
