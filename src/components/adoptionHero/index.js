@@ -15,24 +15,29 @@ const Hero = ({
 }) => {
     return (
         <div>
-            <Image 
-            src={adoptionDog}
-            alt="adoptionHero"
-            className='relative'
-            width='100vw'
-            />
-            <h1 className={classNames(
-                'absolute top-60 left-10 w-[403px]',
-                titleSize, fontColor
-            )}>{title}</h1>
-            <p className={classNames(
-                'absolute bottom-1/4 left-10 w-1/2',
-                descSize,
-                fontColor
-            )}>{desc}</p>
-            <div className='flex justify-center mx-36 m-auto border-2'>
+            <div className='relative'>
+                <Image 
+                src={adoptionDog}
+                alt="adoptionHero"
+                width="100vw"
+                height="100vh"
+                layout="responsive"
+                objectFit="cover"
+                objectPosition="center"
+                />
+                <h1 className={classNames(
+                    'absolute top-40 left-10 w-[403px]',
+                    titleSize, fontColor
+                )}>{title}</h1>
+                <p className={classNames(
+                    'absolute top-80 left-10 w-1/2',
+                    descSize,
+                    fontColor
+                )}>{desc}</p>
+            </div>
+            <div className='flex justify-center mx-36 m-auto border-2 gap-2'>
                 <DonationBox />
-                <DonationImage className='w-1/2' />
+                <DonationImage />
             </div>
         </div>
     );
