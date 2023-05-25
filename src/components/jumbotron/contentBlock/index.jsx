@@ -8,24 +8,28 @@ export const ContentBlockA = ({
   description,
   fontColor,
   btnColor,
+  btnText,
   btnTextColor,
   rootClass,
 }) => {
   return (
     <div
-      className={classNames("md:w-1/2 text-left", fontColor || "text-black")}
+      className={classNames(
+        "md:w-1/2 text-left mt-[-10%]",
+        fontColor || "text-black"
+      )}
     >
       <h1 className="text-4xl tracking-wide font-bold mb-4">{title}</h1>
       <p className="text-lg">{description}</p>
       <button
         className={classNames(
-          "px-12 py-2.5 mt-8 rounded-full shadow-md",
+          "px-8 py-4 mt-8 rounded-full shadow-md text-base font-semibold",
           btnColor || "bg-black",
           btnTextColor || "text-white",
           rootClass || ""
         )}
       >
-        Button
+        {btnText || "Button"}
       </button>
     </div>
   );
