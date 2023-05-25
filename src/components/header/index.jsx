@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
 import SearchBar from "../searchBar";
 import logo from "../../../public/assets/logo/logo_bcspca.svg";
 import Button from "../common/button";
@@ -14,17 +15,20 @@ const Header = () => {
 
   return (
     <header className="bg-white p-4">
-      <nav className="flex items-center justify-between max-w-6xl mx-auto px-4 py-3 md:pl-2">
+      <nav className="flex items-center justify-between max-w-6xl mx-auto px-3 py-3 md:pl-2">
         <Link href="/" className="text-3xl font-bold">
           <Image src={logo} alt="logo" width={140} />
         </Link>
-        <button className="block md:hidden" onClick={toggleMenu}>
-          {isExpanded ? (
-            <FaTimes className="h-6 w-6" />
-          ) : (
-            <FaBars className="h-6 w-6" />
-          )}
-        </button>
+        <div className="flex gap-5">
+          <IoSearch className="block md:hidden h-6 w-6" />
+          <button className="block md:hidden" onClick={toggleMenu}>
+            {isExpanded ? (
+              <FaTimes className="h-6 w-6" />
+            ) : (
+              <FaBars className="h-6 w-6" />
+            )}
+          </button>
+        </div>
         <ul
           className={`${
             isExpanded ? "block" : "hidden"

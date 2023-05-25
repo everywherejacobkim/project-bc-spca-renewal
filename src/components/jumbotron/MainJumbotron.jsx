@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import { ContentBlockA } from "./contentBlock/index";
@@ -14,6 +14,14 @@ const MainJumbotron = ({
   btnText,
   btnTextColor,
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
+
   return (
     <div
       className={classNames(
@@ -21,34 +29,52 @@ const MainJumbotron = ({
         bgColor || "bg-gray-300"
       )}
     >
-      <div
-        className={classNames(
-          "flex flex-col gap-8 md:flex-row",
-          {
-            "md:flex-row-reverse": imagePosition === "right",
-          },
-          "items-center md:mx-14 md:pl-2"
-        )}
-      >
-        {image && (
-          <div>
-            <Image
-              src={image}
-              alt="image description"
-              width={650}
-              height={650}
+      <div className="flex flex-col gap-8 md:flex-row items-center md:mx-14 md:pl-2">
+        {isMobile ? (
+          <>
+            <ContentBlockA
+              title={title}
+              description={description}
+              fontColor={fontColor}
+              btnColor={btnColor}
+              btnText={btnText}
+              btnTextColor={btnTextColor}
+              className="w-full md:w-1/2"
             />
-          </div>
+            {image && (
+              <div>
+                <Image
+                  src={image}
+                  alt="image description"
+                  width={650}
+                  height={650}
+                />
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            {image && (
+              <div>
+                <Image
+                  src={image}
+                  alt="image description"
+                  width={650}
+                  height={650}
+                />
+              </div>
+            )}
+            <ContentBlockA
+              title={title}
+              description={description}
+              fontColor={fontColor}
+              btnColor={btnColor}
+              btnText={btnText}
+              btnTextColor={btnTextColor}
+              className="w-full md:w-1/2"
+            />
+          </>
         )}
-        <ContentBlockA
-          title={title}
-          description={description}
-          fontColor={fontColor}
-          btnColor={btnColor}
-          btnText={btnText}
-          btnTextColor={btnTextColor}
-          className="w-full md:w-1/2"
-        />
       </div>
     </div>
   );
