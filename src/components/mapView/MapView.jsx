@@ -5,20 +5,20 @@ const MapView = () => {
   const [viewport, setViewport] = useState({
     width: "100%",
     height: "100%",
-    latitude: 37.7577,
-    longitude: -122.4376,
+    latitude: 49.2827,
+    longitude: -123.1207,
     zoom: 10,
   });
 
   return (
-    <div className="w-1/2 h-screen">
+    <div className="w-full h-screen">
       <ReactMapGL
+        mapStyle="mapbox://styles/jacob0882/cliui4lmh00cw01pwc350f7n9"
+        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
         {...viewport}
-        onViewportChange={(nextViewport) => setViewport(nextViewport)}
-        mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
       >
         <Marker latitude={37.7577} longitude={-122.4376}>
-          <div>Marker</div>
+          <div className="text-blue-500">This is Marker</div>
         </Marker>
       </ReactMapGL>
     </div>
