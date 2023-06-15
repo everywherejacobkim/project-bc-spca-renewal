@@ -23,11 +23,18 @@ module.exports = {
         'light-blue':'#D4E6FF'
       },
       colors: {
+        "primary": "#00337F",
+        "primary-light": "#165EC8",
+        "secondary-yellow": "#E7A511",
+        "secondary-red": "#D84315",
+        "light-yellow": "#FFEEC1",
+        "light-blue": "#D4E6FF",
 				"btn-primary": "#00337F",
         "white":'#ffffff',
         "gray60":'#757575',
         "gray40":'#E0E0E0'
-        
+        // "skyblue-jumbotron": "#D4E6FF",
+
 			},
     },
   },
