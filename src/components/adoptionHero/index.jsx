@@ -2,8 +2,8 @@ import React from 'react'
 import adoptionDog from "../../../public/assets/images/woman.png"
 import Image from 'next/image'
 import classNames from 'classnames'
-import DonationBox from '@/pages/donation/donationBox'
-import DonationImage from '@/pages/donation/donationImage'
+// import DonationBox from '@/pages/donation/donationBox'
+// import DonationImage from '@/pages/donation/donationImage'
 
 
 const Hero = ({
@@ -36,8 +36,8 @@ const Hero = ({
                 )}>{desc}</p>
             </div>
             <div className='flex justify-center mx-36 m-auto border-2 gap-2'>
-                <DonationBox />
-                <DonationImage />
+                {/* <DonationBox />
+                <DonationImage /> */}
             </div>
         </div>
     );
