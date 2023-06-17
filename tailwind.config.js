@@ -27,6 +27,7 @@ module.exports = {
 				"btn-primary": "#00337F",
         "gray-20": "#F0F0F0",
         "gray-30": "#212121",
+        "gray-60": "#737575",
         // "skyblue-jumbotron": "#D4E6FF",
 			},
     },

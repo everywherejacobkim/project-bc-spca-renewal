@@ -11,7 +11,7 @@ const MapView = () => {
   });
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-1/2 h-screen mb-6">
       <ReactMapGL
         mapStyle="mapbox://styles/jacob0882/cliui4lmh00cw01pwc350f7n9"
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
