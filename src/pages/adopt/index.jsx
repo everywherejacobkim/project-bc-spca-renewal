@@ -8,7 +8,7 @@ const index = () => {
   return (
     <>
       <Header />
-      <div className="flex">
+      <div className="flex justify-center mt-8">
         <LocationList />
         <MapView />
       </div>
