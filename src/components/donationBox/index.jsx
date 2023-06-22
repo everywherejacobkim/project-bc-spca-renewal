@@ -3,9 +3,9 @@ import React from 'react';
 
 const DonationBox = ({questions}) => {
     return (
-        <div className='border-2 w-2/3 flex flex-col justify-center rounded-lg drop-shadow-lg'>
+        <div className='border-2 w-2/3 flex flex-col justify-center rounded-[30px] drop-shadow-lg  my-32'>
             {/*question props*/}
-            <div className='px-12 mx-auto'>
+            <div className='px-12 mx-auto my-14 '>
                 <h3 className='text-left text-2xl font-semibold mb-10'>Donation Detail</h3>
                 <p>Do you want to make this a montly gift?</p>
                 <div className='flex gap-5 mt-4 mb-8' >
@@ -45,7 +45,7 @@ const DonationBox = ({questions}) => {
                             </label>
                         </form>
                 </div>
-                <div className='mt-14 mb-10'>
+                <div className='mt-14'>
                     <Button label="Next Step" width="w-full" />
                 </div>
             </div>
