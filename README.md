@@ -26,7 +26,7 @@ The following are some of the key features that we plan to implement:
 
 ## Project Timeline
 
-The project is expected to be completed by the end of May, 2023. 
+The project is expected to be completed by the end of July, 2023. 
 
 
 ## Conclusion
