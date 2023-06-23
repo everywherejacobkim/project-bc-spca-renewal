@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classNames from "classnames";
+import Link from "next/link";
 
 const LocationSearchBar = ({
   label,
@@ -39,16 +40,18 @@ const LocationSearchBar = ({
             placeholder={placeholder}
             className="w-full sm:w-2/3 px-4 py-2 border border-gray-300 rounded-3xl shadow-sm sm:text-sm"
           />
-          <button
-            type="submit"
-            className={classNames(
-              "mt-4 sm:mt-0 items-center rounded-3xl py-2 px-6 sm:px-10",
-              btnColor || "bg-black",
-              btnTextColor || "text-white"
-            )}
-          >
-            Button
-          </button>
+          <Link href="/search-map">
+            <button
+              type="submit"
+              className={classNames(
+                "mt-4 sm:mt-0 items-center rounded-3xl py-2 px-6 sm:px-10",
+                btnColor || "bg-black",
+                btnTextColor || "text-white"
+              )}
+            >
+              Button
+            </button>
+          </Link>
         </div>
       </div>
     </form>
