@@ -57,7 +57,7 @@ const LocationList = () => {
           textColor="text-blue-900"
         />
       </div>
-      <div className="flex justify-center items-center ml-4 overflow-y-auto">
+      <div className="flex justify-center items-center ml-4 mt-8 overflow-y-scroll max-h-96">
         <ul>
           <li>
             <LocationCard items={cardItems} />

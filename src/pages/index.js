@@ -48,7 +48,7 @@ export default function Home() {
           <div className="my-8">
             <ImageList images={images} />
             <div className="mx-8 my-8">
-              <LocationSearchBar label="Find Volunteer Opportunities by Location" placeholder="Enter your location" />
+              <LocationSearchBar label="Find Volunteer Opportunities by Location" placeholder="Enter your location" width="860px" />
             </div>
           </div>
           <InfoJumbotron title="BC SPCA Mission" description="The mission of the British Columbia Society for the Prevention of Cruelty to Animals (BC SPCA) is to protect and enhance the quality of life for domestic, farm and wild animals in British Columbia. We assist more than 118,679 animals in need every year and are funded by compassionate animal lovers who support our work and partner with us to protect and enhance the quality of life for domestic, farm and wild animals in B.C." image={testImage6} imagePosition="left" />

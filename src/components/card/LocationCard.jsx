@@ -5,7 +5,7 @@ import discIcon from "../../../public/assets/svgs/disc.svg";
 import xCircleIcon from "../../../public/assets/svgs/x-circle.svg";
 
 const LocationCard = ({ items }) => (
-  <div>
+  <div className="mt-28">
     {items.map((item) => (
       <div
         key={item.id}

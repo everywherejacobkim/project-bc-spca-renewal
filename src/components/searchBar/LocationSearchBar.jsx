@@ -9,6 +9,7 @@ const LocationSearchBar = ({
   bgColor,
   btnColor,
   btnTextColor,
+  width,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -26,18 +27,18 @@ const LocationSearchBar = ({
       onSubmit={handleSubmit}
       className={classNames("flex justify-center", bgColor || "bg-white")}
     >
-      <div>
+      <div className={classNames(`w-[${width}]`)}>
         <div className="mb-4 text-left px-2 font-semibold">
           <label>{label}</label>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="relative flex items-center mb-2 sm:mb-0">
+        <div className="flex flex-col justify-between sm:flex-row gap-4">
+          <div className="relative w-full flex items-center mb-2 sm:mb-0">
             <input
               type="text"
               value={searchTerm}
               onChange={handleInputChange}
               placeholder={placeholder}
-              className="w-64 px-4 py-2 pl-10 bg-gray-200 border border-gray-300 rounded-3xl shadow-sm text-sm"
+              className="w-full px-4 py-2 pl-10 bg-gray-200 border border-gray-300 rounded-3xl shadow-sm text-sm"
             />
             <span className="absolute left-3 text-gray-400">
               <RiSearchLine />
