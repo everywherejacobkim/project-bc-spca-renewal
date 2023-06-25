@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import DonationImg from '../../../public/assets/images/medical-fund-image.png'
-import Button from '../common/button';
-import ProgressBar from '../ProgressBar';
+import DonationImg from '../../../../public/assets/images/medical-fund-image.png'
+import Button from '../../common/button';
+import ProgressBar from '../../ProgressBar';
 
 
 const DonationImage = () => {

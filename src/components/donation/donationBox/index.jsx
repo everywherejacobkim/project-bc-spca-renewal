@@ -1,7 +1,11 @@
 import Button from '@/components/common/button';
 import React from 'react';
+import DonationInfo from '../DonationInfo';
+import PaymentInfo from '../PaymentInfo';
+import { useState } from 'react';
+const DonationBox = (props) => {
 
-const DonationBox = ({questions}) => {
+    
     return (
         <div className='border-2 w-2/3 flex flex-col justify-center rounded-[30px] drop-shadow-lg  my-32'>
             {/*question props*/}
@@ -46,8 +50,11 @@ const DonationBox = ({questions}) => {
                         </form>
                 </div>
                 <div className='mt-14'>
-                    <Button label="Next Step" width="w-full" />
+                    <Button label="Next Step" width="w-full" onClick={props.onClick} />
+                    
                 </div>
+                
+            
             </div>
         </div>
     );

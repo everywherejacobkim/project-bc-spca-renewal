@@ -1,19 +1,28 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import React from "react";
 import Hero from "@/components/adoptionHero";
-import DonationBox from "@/components/donationBox";
-import DonationImage from "@/components/donationImage";
+import DonationBox from "@/components/donation/donationBox";
+import DonationImage from "@/components/donation/donationImage/DonationImage";
+import { useState } from 'react';
+import DonationInfo from "@/components/donation/DonationInfo";
 
 
+const Index = () => {
 
-const index = () => {
   const questions = [
     {question:"Do you want to make this a montly gift?" },
     {question:"Who is making this donation?"},
     {question:"Slect your amount"},
     {question:"Are you making this gift in honour of someone?"}
   ]
+
+  const [component, setComponent] = useState(true);
+  const [buttonClicked, setButtonClicked] = useState(false);
+
+  const handleButtonClick = () => {
+    setComponent(false);
+  };
+  
   return (
     <div>
       <Header />
@@ -23,7 +32,12 @@ const index = () => {
       fontColor='text-white' titleSize="text-5xl" descSize="text-lg"
     />
     <div className="flex gap-5 mx-[156px]">
-      <DonationBox questions={questions} />
+    {component ? (
+     <DonationBox  onClick={handleButtonClick}/>
+       )  :(
+        <DonationInfo /> 
+      )
+    }
       <DonationImage />
     </div>
       <Footer />
@@ -31,4 +45,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
