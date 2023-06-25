@@ -7,7 +7,7 @@ import secondHeroImage from "../../public/assets/svgs/second-hero.svg";
 import adoptImage from "../../public/assets/svgs/image-adopt-a-pet.svg";
 import volunteerImage from "../../public/assets/svgs/image-volunteer.svg";
 import donateImage from "../../public/assets/svgs/image-donate.svg";
-import testImage6 from "../../public/assets/images/test6.jpg";
+import bcMissionBannerImage from "../../public/assets/svgs/bg-mission-banner.svg";
 import ImageList from "@/components/list/ImageList";
 import LocationSearchBar from "@/components/searchBar/LocationSearchBar";
 import CardBox from "@/components/cardBox";
@@ -57,7 +57,7 @@ export default function Home() {
               <LocationSearchBar label="Find Volunteer Opportunities by Location" placeholder="Enter your location" width="w-2/3" />
             </div>
           </div>
-          <InfoJumbotron title="BC SPCA Mission" description="The mission of the British Columbia Society for the Prevention of Cruelty to Animals (BC SPCA) is to protect and enhance the quality of life for domestic, farm and wild animals in British Columbia. We assist more than 118,679 animals in need every year and are funded by compassionate animal lovers who support our work and partner with us to protect and enhance the quality of life for domestic, farm and wild animals in B.C." image={testImage6} imagePosition="left" />
+          <InfoJumbotron title="BC SPCA Mission" description="The mission of the British Columbia Society for the Prevention of Cruelty to Animals (BC SPCA) is to protect and enhance the quality of life for domestic, farm and wild animals in British Columbia. We assist more than 118,679 animals in need every year and are funded by compassionate animal lovers who support our work and partner with us to protect and enhance the quality of life for domestic, farm and wild animals in B.C." />
           <CardBox cardData={cardData} textSize='text-base' textColor='text-black' btnTextColor='text-black' bgColor='bg-white'/>
           <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
           You can help local pets & win big!" btnColor="bg-gray-700" image={secondHeroImage} imagePosition="left" bgColor="bg-light-yellow"/>
