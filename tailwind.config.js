@@ -31,10 +31,12 @@ module.exports = {
         "light-blue": "#D4E6FF",
 				"btn-primary": "#00337F",
         "white":'#ffffff',
-        "gray60":'#757575',
-        "gray40":'#E0E0E0'
-        // "skyblue-jumbotron": "#D4E6FF",
-
+        "gray-20": "#F0F0F0",
+        "gray-30": "#212121",
+        "gray-40": "#E0E0E0",
+        "gray-60": "#737575",
+        "gray-80": "#424242",
+        "gray-100": "#212121",
 			},
     },
   },

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import classNames from "classnames";
+import Link from "next/link";
+import { RiSearchLine } from "react-icons/ri";
 
 const LocationSearchBar = ({
   label,
@@ -7,6 +9,7 @@ const LocationSearchBar = ({
   bgColor,
   btnColor,
   btnTextColor,
+  width,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -22,33 +25,37 @@ const LocationSearchBar = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className={classNames(
-        "w-full rounded-xl mx-4 sm:mx-10 lg:mx-52 py-8",
-        bgColor || "bg-gray-200"
-      )}
+      className={classNames("flex justify-center", bgColor || "bg-white")}
     >
-      <div className="w-full sm:w-5/6 mx-auto px-4 sm:px-0">
+      <div className={classNames(width || "w-full")}>
         <div className="mb-4 text-left px-2 font-semibold">
           <label>{label}</label>
         </div>
-        <div className="flex flex-col sm:flex-row gap-6">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleInputChange}
-            placeholder={placeholder}
-            className="w-full sm:w-2/3 px-4 py-2 border border-gray-300 rounded-3xl shadow-sm sm:text-sm"
-          />
-          <button
-            type="submit"
-            className={classNames(
-              "mt-4 sm:mt-0 items-center rounded-3xl py-2 px-6 sm:px-10",
-              btnColor || "bg-black",
-              btnTextColor || "text-white"
-            )}
-          >
-            Button
-          </button>
+        <div className="flex flex-col justify-between sm:flex-row gap-4">
+          <div className="relative w-full flex items-center mb-2 sm:mb-0">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={handleInputChange}
+              placeholder={placeholder}
+              className="w-full px-4 py-2 pl-10 bg-gray-200 border border-gray-300 rounded-3xl shadow-sm text-sm"
+            />
+            <span className="absolute left-3 text-gray-400">
+              <RiSearchLine />
+            </span>
+          </div>
+          <Link href="/search-map">
+            <button
+              type="submit"
+              className={classNames(
+                "mt-4 sm:mt-0 rounded-3xl py-2 px-6 sm:px-10",
+                btnColor || "bg-primary",
+                btnTextColor || "text-white"
+              )}
+            >
+              Search
+            </button>
+          </Link>
         </div>
       </div>
     </form>

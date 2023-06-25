@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const ImageList = ({ images }) => {
   return (
@@ -8,13 +9,19 @@ const ImageList = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className="flex justify-center items-center rounded-xl"
+            className="relative flex justify-center items-end rounded-xl bg-gray-20 hover:bg-light-blue cursor-pointer w-72 h-72"
           >
+            <div className="absolute top-0 left-0 mt-7 ml-6 text-xl font-bold">
+              {image.title}
+            </div>
+            <div className="absolute top-0 right-0 rounded-full p-3 mt-6 mr-6 bg-white hover:bg-primary hover:text-white">
+              <AiOutlineArrowRight className="text-xl" />
+            </div>
             <Image
-              src={image}
+              src={image.image}
               alt="image description"
-              width={300}
-              height={300}
+              width={230}
+              height={183}
               className="rounded-xl"
             />
           </div>
