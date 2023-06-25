@@ -40,7 +40,7 @@ const LocationList = () => {
     <div className="flex flex-col items-start">
       <span>
         <h1 className="text-3xl font-bold ml-8">All BC SPCA Locations</h1>
-        <p className="text-xs ml-8">
+        <p className="text-xs ml-8 mt-2">
           Showing all 25 locations within 200km from Vancouver, BC
         </p>
       </span>
