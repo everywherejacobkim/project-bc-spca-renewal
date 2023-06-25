@@ -5,24 +5,53 @@ import DonationBox from "@/components/donation/donationBox";
 import DonationImage from "@/components/donation/donationImage/DonationImage";
 import { useState } from 'react';
 import DonationInfo from "@/components/donation/DonationInfo";
+import PaymentInfo from "@/components/donation/PaymentInfo";
 
 
 const Index = () => {
 
-  const questions = [
-    {question:"Do you want to make this a montly gift?" },
-    {question:"Who is making this donation?"},
-    {question:"Slect your amount"},
-    {question:"Are you making this gift in honour of someone?"}
-  ]
+ 
+  // const [isComponentA, setIsComponentA] = useState(true);
+  // const [isComponentB, setIsComponentB] = useState(false);
 
-  const [component, setComponent] = useState(true);
-  const [buttonClicked, setButtonClicked] = useState(false);
+  // const handleComponentAClick = () => {
+  //   setIsComponentA(false);
+  //   setIsComponentB(true);
+  // };
+  // const handleComponentBClick = () => {
+  //   setIsComponentB(false);
+  // };
+  const [componentStack, setComponentStack] = useState([]);
+  const [currentComponent, setCurrentComponent] = useState('ComponentA');
 
-  const handleButtonClick = () => {
-    setComponent(false);
+  const handleComponentAClick = () => {
+    setComponentStack([...componentStack, 'ComponentA']);
+    setCurrentComponent('ComponentB');
   };
-  
+
+  const handleComponentBClick = () => {
+    setComponentStack([...componentStack, 'ComponentB']);
+    setCurrentComponent('ComponentC');
+  };
+
+  const handleBackButtonClick = () => {
+    const previousComponent = componentStack.pop();
+    setCurrentComponent(previousComponent);
+    setComponentStack([...componentStack]);
+  };
+
+  const renderComponent = () => {
+    switch (currentComponent) {
+      case 'ComponentA':
+        return <DonationBox onClick={handleComponentAClick} />;
+      case 'ComponentB':
+        return <DonationInfo onClick={handleComponentBClick} onButtonClick={handleBackButtonClick} />;
+      case 'ComponentC':
+        return <PaymentInfo componentStack={componentStack} setComponentStack={setComponentStack} onButtonClick={handleBackButtonClick} />
+      default:
+        return null;
+    }
+  };
   return (
     <div>
       <Header />
@@ -32,12 +61,20 @@ const Index = () => {
       fontColor='text-white' titleSize="text-5xl" descSize="text-lg"
     />
     <div className="flex gap-5 mx-[156px]">
-    {component ? (
+      {renderComponent()}
+           {/* {isComponentA ?(
+      <DonationBox onClick={handleComponentAClick} />
+     ): isComponentB ? (
+        <DonationInfo onClick={handleComponentBClick} />
+     ):(
+      <PaymentInfo />
+     )} */}
+    {/* {component ? (
      <DonationBox  onClick={handleButtonClick}/>
        )  :(
-        <DonationInfo /> 
+        <DonationInfo onClick={handleButtonClick} /> 
       )
-    }
+    } */}
       <DonationImage />
     </div>
       <Footer />
