@@ -17,6 +17,11 @@ module.exports = {
         md: "768px",
         lg: "1024px",
       },
+      backgroundColor:{
+        'primaryLight':'#165EC8',
+        'gray20':'#F0F0F0',
+        'light-blue':'#D4E6FF'
+      },
       colors: {
         "primary": "#00337F",
         "primary-light": "#165EC8",
