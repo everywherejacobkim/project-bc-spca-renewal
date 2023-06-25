@@ -27,7 +27,7 @@ const LocationSearchBar = ({
       onSubmit={handleSubmit}
       className={classNames("flex justify-center", bgColor || "bg-white")}
     >
-      <div className={classNames(`w-[${width}]`)}>
+      <div className={classNames(width || "w-full")}>
         <div className="mb-4 text-left px-2 font-semibold">
           <label>{label}</label>
         </div>
