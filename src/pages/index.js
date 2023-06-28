@@ -26,18 +26,18 @@ export default function Home() {
   const cardData = [
     { title: 'Care for puppie', desc: 'Weve seen as increase in puppies comming through out doors in recent months', imgUrl: require("../../public/assets/icons/heart.png"), btn:'Help puppy' },
     { title: 'Adopt A Kennel', desc: 'You can help provide for their care by purchasing a plaque on one of our animal spaces', imgUrl: require("../../public/assets/icons/house.png"), btn:"Adopt now" },
-    { title: 'Pet Food', desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../public/assets/icons/paw.png"), btn:"Donate food" }
+    { title: 'Pet Food',  desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../public/assets/icons/paw.png"), btn:"Donate food" }
   ];
 
   const menuImages = [
     {
-      title: 'Adopt a pet', image: adoptImage
+      title: 'Adopt a pet', link:"/", image: adoptImage
     },
     {
-      title: 'Volunteer', image: volunteerImage
+      title: 'Volunteer', link:"/", image: volunteerImage
     },
     {
-      title: 'Donate', image: donateImage
+      title: 'Donate', link:"donation", image: donateImage
     }
   ]
 

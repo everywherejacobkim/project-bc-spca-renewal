@@ -2,6 +2,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import dogImage from '../../../public/assets/images/Group 31.png'
 import arrowIcon from  '../../../public/assets/icons/right-arrow.png'
+import Link from "next/link";
 
 const CardBox = ({
   cardData,
@@ -44,7 +45,9 @@ const CardBox = ({
                 />
               <h3 className={classNames(
                 'pl-4 leading-9',
-                textSize='text-xl')}>{data.title}
+                textSize='text-xl')}>
+                 {data.title}
+                
               </h3>               
             </div>
             <p className='py-6 text-left'>{data.desc}</p>

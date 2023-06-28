@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Link from "next/link";
 
 const ImageList = ({ images }) => {
   return (
@@ -15,7 +16,10 @@ const ImageList = ({ images }) => {
               {image.title}
             </div>
             <div className="absolute top-0 right-0 rounded-full p-3 mt-6 mr-6 bg-white hover:bg-primary hover:text-white">
+            <Link href={`/${image.link}`}>
               <AiOutlineArrowRight className="text-xl" />
+            </Link>
+              
             </div>
             <Image
               src={image.image}

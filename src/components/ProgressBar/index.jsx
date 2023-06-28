@@ -28,13 +28,10 @@ const containerStyles = {
   return (
     <div>
         <span style={labelStyles}>{`${completed}%`}</span>
-        
-    <div style={containerStyles}>
-         
-      <div style={fillerStyles}>
-       
-      </div>
-    </div>
+        <div style={containerStyles}>
+          <div style={fillerStyles}>
+          </div>
+        </div>
     </div>
   );
 };

@@ -14,12 +14,12 @@ const DonationBox = (props) => {
                 <p>Do you want to make this a montly gift?</p>
                 <div className='flex gap-5 mt-4 mb-8' >
                     <Button label='Donate one time' width="w-60"  />
-                    <Button label='Donate Montly' width="w-60"  bgColor='bg-gray40' textColor='text-gray60' />
+                    <Button label='Donate Montly' width="w-60"  bgColor='bg-gray-40' textColor='text-gray-60' />
                 </div>
                 <p className='text-left mb-4'>Who is making this donation?</p>
                 <div className='flex  gap-5 mt-4 mb-8' >
                     <Button label='Individual' width="w-60"   />
-                    <Button label='Organization' width="w-60"  bgColor='bg-gray40' textColor='text-gray60' />
+                    <Button label='Organization' width="w-60"  bgColor='bg-gray-40' textColor='text-gray-60' />
                 </div>
                 <p>Select your amount</p>
                 <div className='flex justfy-center gap-5  mt-4 mb-8'>
@@ -41,12 +41,9 @@ const DonationBox = (props) => {
                             <option value="none">In Honour</option>
                         </select>
                         <form className='flex gap-5'>
-                            <label className='border-2 w-60 h-10 rounded-full'>
-                            <input className="ml-5 mt-2 leading-3" type="text" defaultValue="first name"  />
-                            </label>
-                            <label className='border-2 w-60 h-10 rounded-full'>
-                            <input className="ml-5 mt-2 leading-3" type="text" defaultValue="last name"  />
-                            </label>
+                            <input className="border-2 w-60 h-10 rounded-full first-line:ml-5 mt-2 leading-3" type="text" defaultValue="first name"  />                            
+                            <input className="border-2 w-60 h-10 rounded-full ml-5 mt-2 leading-3" type="text" defaultValue="last name"  />
+                            
                         </form>
                 </div>
                 <div className='mt-14'>
