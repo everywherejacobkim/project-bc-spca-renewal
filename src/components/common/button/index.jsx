@@ -5,9 +5,9 @@ const Button = ({ onClick, label, bgColor, textColor, width, height }) => {
   return (
     <button
       className={classNames(
-        "hidden md:block px-4 py-2 rounded-full text-white text-sm font-semibold",
-        bgColor || "bg-btn-primary",
-        textColor || "text-white",
+        "hidden md:block px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-white active:bg-primary",
+        bgColor || "bg-gray-40",
+        textColor || "text-primary",
         width || "w-32",
         height || "h-10"
       )}
