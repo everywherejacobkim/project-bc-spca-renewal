@@ -6,7 +6,7 @@ import DonationImage from "@/components/donation/donationImage/DonationImage";
 import { useState } from 'react';
 import DonationInfo from "@/components/donation/DonationInfo";
 import PaymentInfo from "@/components/donation/PaymentInfo";
-
+import { checkout } from "../../../checkout"
 
 const Index = () => {
 
@@ -29,10 +29,10 @@ const Index = () => {
     setCurrentComponent('ComponentB');
   };
 
-  const handleComponentBClick = () => {
-    setComponentStack([...componentStack, 'ComponentB']);
-    setCurrentComponent('ComponentC');
-  };
+  // const handleComponentBClick = () => {
+  //   setComponentStack([...componentStack, 'ComponentB']);
+  //   setCurrentComponent('ComponentC');
+  // };
 
   const handleBackButtonClick = () => {
     const previousComponent = componentStack.pop();
@@ -45,11 +45,21 @@ const Index = () => {
       case 'ComponentA':
         return <DonationBox onClick={handleComponentAClick} />;
       case 'ComponentB':
-        return <DonationInfo onClick={handleComponentBClick} onButtonClick={handleBackButtonClick} />;
-      case 'ComponentC':
-        return <PaymentInfo componentStack={componentStack} setComponentStack={setComponentStack} onButtonClick={handleBackButtonClick} />
-      default:
-        return null;
+        return <DonationInfo onClick={(()=>{
+            checkout({
+              lineItems:[
+                {
+                  price:"price_1NOBpoJUzbGisoG64CV63j58",
+                  quantity:1
+                }
+              ]
+            })
+         } )} onButtonClick={handleBackButtonClick} />;
+      // case 'ComponentC':
+       
+      // return 
+      // default:
+      //   return null;
     }
   };
   return (
