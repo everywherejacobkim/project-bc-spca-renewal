@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-const Button = ({ onClick, label, bgColor, textColor, width, height, padding, border }) => {
+const Button = ({ onClick, label, bgColor, textColor, width, height, padding, border, hoverBg, borderColor }) => {
   return (
     <button
       className={classNames(
@@ -11,7 +11,9 @@ const Button = ({ onClick, label, bgColor, textColor, width, height, padding, bo
         width || "w-32",
         height || "h-10",
         padding || "px-4",
-        border || 'none'
+        border || 'none',
+        hoverBg || 'none',
+        borderColor || 'none'
       )}
       onClick={onClick}
     >

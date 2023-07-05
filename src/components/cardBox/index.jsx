@@ -3,6 +3,7 @@ import classNames from "classnames";
 import dogImage from '../../../public/assets/images/Group 31.png'
 import arrowIcon from  '../../../public/assets/icons/right-arrow.png'
 import Link from "next/link";
+import Button from "../common/button";
 
 const CardBox = ({
   cardData,
@@ -50,9 +51,11 @@ const CardBox = ({
                 
               </h3>               
             </div>
-            <p className='py-6 text-left'>{data.desc}</p>
-            <div className="flex flex-row justify-start">
-              <button className='py-2 rounded-full border-2 w-24 text-center'>{data.btn}</button>
+            <p className='h-24 pt-5 text-left'>{data.desc}</p>
+            <div className={classNames(
+            'flex flex-row justify-start',
+            )}>
+              <Button hoverBg="hover:bg-primary-light" label={data.btn}/>
             </div>
           </div>
         ))}
