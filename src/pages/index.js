@@ -26,18 +26,18 @@ export default function Home() {
   const cardData = [
     { title: 'Care for puppie', desc: 'Weve seen as increase in puppies comming through out doors in recent months', imgUrl: require("../../public/assets/icons/heart.png"), btn:'Help puppy' },
     { title: 'Adopt A Kennel', desc: 'You can help provide for their care by purchasing a plaque on one of our animal spaces', imgUrl: require("../../public/assets/icons/house.png"), btn:"Adopt now" },
-    { title: 'Pet Food', desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../public/assets/icons/paw.png"), btn:"Donate food" }
+    { title: 'Pet Food',  desc: 'Pet food and supplies are needed at branches that have outreach programs.', imgUrl: require("../../public/assets/icons/paw.png"), btn:"Donate food" }
   ];
 
   const menuImages = [
     {
-      title: 'Adopt a pet', image: adoptImage
+      title: 'Adopt a pet', link:"/", image: adoptImage
     },
     {
-      title: 'Volunteer', image: volunteerImage
+      title: 'Volunteer', link:"/", image: volunteerImage
     },
     {
-      title: 'Donate', image: donateImage
+      title: 'Donate', link:"donation", image: donateImage
     }
   ]
 
@@ -60,6 +60,7 @@ export default function Home() {
           <InfoJumbotron title="BC SPCA Mission" description="The mission of the British Columbia Society for the Prevention of Cruelty to Animals (BC SPCA) is to protect and enhance the quality of life for domestic, farm and wild animals in British Columbia. We assist more than 118,679 animals in need every year and are funded by compassionate animal lovers who support our work and partner with us to protect and enhance the quality of life for domestic, farm and wild animals in B.C." />
            <CardBox cardData={cardData} textSize='text-base' textColor='text-black' btnTextColor='text-black' bgColor='bg-white' cardBgColor='bg-gray20' />
           <MainJumbotron title="The Lottery is back!" description="30 CASH prizes and bonus 50/50 pot up to $800,000.
+
           You can help local pets & win big!" btnColor="bg-gray-700" image={secondHeroImage} imagePosition="left" bgColor="bg-light-yellow"/>
          <StoryCard storiesData={storiesData} textSize='text-base' textColor='text-black' cardBgColor='bg-gray20' />
           <SubscribeForm title="Subscribe for BC SPCA Updates" description="Stay up to date on the news and events supporting animal welfare in B.C." placeholder="Email Address" />

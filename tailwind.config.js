@@ -30,6 +30,7 @@ module.exports = {
         "light-yellow": "#FFEEC1",
         "light-blue": "#D4E6FF",
 				"btn-primary": "#00337F",
+        "white":'#ffffff',
         "gray-20": "#F0F0F0",
         "gray-30": "#212121",
         "gray-40": "#E0E0E0",
