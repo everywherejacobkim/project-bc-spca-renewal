@@ -56,7 +56,9 @@ const Header = () => {
           </li>
         </ul>
         <SearchBar width="w-36" />
-        <Button label="Donate" />
+        <Link href="/donation">
+          <Button label="Donate" />
+        </Link>
       </nav>
     </header>
   );

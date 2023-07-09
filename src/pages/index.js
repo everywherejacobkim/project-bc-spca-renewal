@@ -31,13 +31,13 @@ export default function Home() {
 
   const menuImages = [
     {
-      title: 'Adopt a pet', link:"/", image: adoptImage
+      title: 'Adopt a pet', link:"/search-map", image: adoptImage
     },
     {
-      title: 'Volunteer', link:"/", image: volunteerImage
+      title: 'Volunteer', link:"/search-map", image: volunteerImage
     },
     {
-      title: 'Donate', link:"donation", image: donateImage
+      title: 'Donate', link:"/donation", image: donateImage
     }
   ]
 
