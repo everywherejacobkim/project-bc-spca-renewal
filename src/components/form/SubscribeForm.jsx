@@ -33,11 +33,11 @@ const SubscribeForm = ({
       onSubmit={handleSubmit}
       className={classNames(
         "w-full px-4 py-8 md:flex md:justify-center md:items-center md:gap-2 md:px-36",
-        bgColor || "bg-gray-400"
+        bgColor || "bg-gray-20"
       )}
     >
       <div className="text-start md:w-1/3">
-        <h1 className="text-lg font-semibold text-white mb-1">{title}</h1>
+        <h1 className="text-lg font-semibold text-black mb-1">{title}</h1>
         <p className="md:w-3/4">{description}</p>
       </div>
       <div className="mt-8 md:mt-4">

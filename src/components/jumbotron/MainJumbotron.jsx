@@ -13,6 +13,7 @@ const MainJumbotron = ({
   btnColor,
   btnText,
   btnTextColor,
+  btnLink,
 }) => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -54,25 +55,49 @@ const MainJumbotron = ({
           </>
         ) : (
           <>
-            {image && (
-              <div>
-                <Image
-                  src={image}
-                  alt="image description"
-                  width={650}
-                  height={650}
+            {imagePosition === "left" ? (
+              <>
+                <div>
+                  <Image
+                    src={image}
+                    alt="image description"
+                    width={650}
+                    height={650}
+                  />
+                </div>
+                <ContentBlockA
+                  title={title}
+                  description={description}
+                  fontColor={fontColor}
+                  btnColor={btnColor}
+                  btnText={btnText}
+                  btnTextColor={btnTextColor}
+                  btnLink={btnLink}
+                  className="w-full md:w-1/2"
                 />
-              </div>
+              </>
+            ) : (
+              <>
+                <ContentBlockA
+                  title={title}
+                  description={description}
+                  fontColor={fontColor}
+                  btnColor={btnColor}
+                  btnText={btnText}
+                  btnTextColor={btnTextColor}
+                  btnLink={btnLink}
+                  className="w-full md:w-1/2"
+                />
+                <div>
+                  <Image
+                    src={image}
+                    alt="image description"
+                    width={650}
+                    height={650}
+                  />
+                </div>
+              </>
             )}
-            <ContentBlockA
-              title={title}
-              description={description}
-              fontColor={fontColor}
-              btnColor={btnColor}
-              btnText={btnText}
-              btnTextColor={btnTextColor}
-              className="w-full md:w-1/2"
-            />
           </>
         )}
       </div>

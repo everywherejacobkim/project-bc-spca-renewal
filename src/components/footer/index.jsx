@@ -1,32 +1,47 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
+import LogoWhite from "../../../public/assets/logo/logo-bcspca-white.svg";
+import {
+  FaFacebookSquare,
+  FaYoutubeSquare,
+  FaTwitterSquare,
+  FaInstagramSquare,
+  FaPinterestSquare,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-white px-4 sm:px-16 py-8">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center mb-8">
         <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 md:mb-0">
-          <h2 className="text-xl font-bold mb-4">Logo</h2>
-          <p className="mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            optio perferendis ad ab neque nihil, dolores consequuntur ipsum it
-            end.
+          <Image src={LogoWhite} alt="Logo" />
+          <p className="my-3 text-xs pr-6">
+            Our mission is to protect and enhance the quality of life for
+            domestic, farm and wild animals in BC. BC SPCA is a registered
+            charity, tax # BN 11881 9036 RR0001
           </p>
+          <div className="flex gap-1">
+            <FaYoutubeSquare className="text-2xl" />
+            <FaInstagramSquare className="text-2xl" />
+            <FaTwitterSquare className="text-2xl" />
+            <FaFacebookSquare className="text-2xl" />
+            <FaPinterestSquare className="text-2xl" />
+          </div>
         </div>
         <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 md:mb-0">
           <h2 className="text-xl font-bold mb-4">BC SPCA</h2>
           <ul className="list-unstyled">
             <li>
-              <a href="#">About us</a>
+              <a href="404">About us</a>
             </li>
             <li>
-              <a href="#">Careers</a>
+              <a href="404">Careers</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="404">Contact</a>
             </li>
             <li>
-              <a href="#">Locations</a>
+              <a href="404">Locations</a>
             </li>
           </ul>
         </div>
@@ -34,16 +49,16 @@ const Footer = () => {
           <h2 className="text-xl font-bold mb-4">Find a friend</h2>
           <ul className="list-unstyled">
             <li>
-              <a href="#">How to adopt?</a>
+              <a href="search-map">How to adopt?</a>
             </li>
             <li>
-              <a href="#">Dogs</a>
+              <a href="search-map">Dogs</a>
             </li>
             <li>
-              <a href="#">Cats</a>
+              <a href="search-map">Cats</a>
             </li>
             <li>
-              <a href="#">Other pets</a>
+              <a href="search-map">Other pets</a>
             </li>
           </ul>
         </div>
@@ -51,18 +66,21 @@ const Footer = () => {
           <h2 className="text-xl font-bold mb-4">Stay in Touch</h2>
           <ul className="list-unstyled">
             <li>
-              <a href="#">Volunteer</a>
+              <a href="search-map">Volunteer</a>
             </li>
             <li>
-              <a href="#">Foster</a>
+              <a href="search-map">Foster</a>
             </li>
             <li>
-              <a href="#">Donate</a>
+              <a href="donation">Donate</a>
             </li>
           </ul>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="px-4 mb-4">
+        <hr className="border-white" />
+      </div>
+      <div className="flex justify-start px-4">
         <p className="text-sm">
           &copy; {new Date().getFullYear()} The British Columbia Society for the
           Prevention of Cruelty to Animals (BC SPCA).
