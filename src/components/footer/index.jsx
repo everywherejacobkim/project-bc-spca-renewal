@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white px-4 sm:px-16 py-8">
+    <footer className="bg-primary text-white px-4 sm:px-16 py-8 md:pt-16 md:pb-8">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center mb-8">
         <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 md:mb-0">
           <Image src={LogoWhite} alt="Logo" />
@@ -77,14 +77,16 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="px-4 mb-4">
-        <hr className="border-white" />
-      </div>
-      <div className="flex justify-start px-4">
-        <p className="text-sm">
-          &copy; {new Date().getFullYear()} The British Columbia Society for the
-          Prevention of Cruelty to Animals (BC SPCA).
-        </p>
+      <div className="flex flex-col justify-center md:w-2/3 md:mx-auto">
+        <div className="px-4 mb-4">
+          <hr className="border-white" />
+        </div>
+        <div className="flex justify-start px-4">
+          <p className="text-sm">
+            &copy; {new Date().getFullYear()} The British Columbia Society for
+            the Prevention of Cruelty to Animals (BC SPCA).
+          </p>
+        </div>
       </div>
     </footer>
   );
