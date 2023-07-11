@@ -1,63 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import LocationCard from "../card/LocationCard";
-import Image1 from "../../../public/assets/svgs/location-1.svg";
-import Image2 from "../../../public/assets/svgs/location-2.svg";
-import Image3 from "../../../public/assets/svgs/location-3.svg";
-import Image4 from "../../../public/assets/svgs/location-4.svg";
-import Image5 from "../../../public/assets/svgs/location-5.svg";
 import Button from "../common/button";
 
-const cardItems = [
-  {
-    id: 1,
-    locationImage: Image1,
-    locationTitle: "Vancouver Office ",
-    locationAddress: "1205 E 7th Ave",
-    locationDistance: 5.9,
-    isAdoptionAvailable: true,
-    isVolunteerAvailable: false,
-  },
-  {
-    id: 2,
-    locationImage: Image2,
-    locationTitle: "Burnaby Office ",
-    locationAddress: "4000 Grange Street",
-    locationDistance: 12.5,
-    isAdoptionAvailable: false,
-    isVolunteerAvailable: true,
-  },
-  {
-    id: 3,
-    locationImage: Image3,
-    locationTitle: "Richmond Office ",
-    locationAddress: "1234 W Stone Avenue",
-    locationDistance: 12.5,
-    isAdoptionAvailable: false,
-    isVolunteerAvailable: true,
-  },
-  {
-    id: 4,
-    locationImage: Image4,
-    locationTitle: "Provincial Office ",
-    locationAddress: "1234 W Stone Avenue",
-    locationDistance: 12.5,
-    isAdoptionAvailable: true,
-    isVolunteerAvailable: true,
-  },
-  {
-    id: 5,
-    locationImage: Image5,
-    locationTitle: "River District Office ",
-    locationAddress: "1234 W Stone Avenue",
-    locationDistance: 12.5,
-    isAdoptionAvailable: false,
-    isVolunteerAvailable: true,
-  },
-];
-
-const LocationList = () => {
-  const [filteredItems, setFilteredItems] = useState(cardItems);
-
+const LocationList = ({
+  cardItems,
+  searchValue,
+  filteredItems,
+  setFilteredItems,
+}) => {
   const handleButtonClick = (type) => {
     if (type === "All") {
       setFilteredItems(cardItems);
@@ -72,6 +22,13 @@ const LocationList = () => {
       );
       setFilteredItems(filteredVolunteerItems);
     }
+  };
+
+  const handleSearch = () => {
+    const filteredSearchItems = cardItems.filter((item) =>
+      item.locationTitle.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setFilteredItems(filteredSearchItems);
   };
 
   return (
