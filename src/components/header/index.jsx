@@ -35,34 +35,30 @@ const Header = () => {
           } md:flex md:items-center md:justify-end md:flex-1 md:gap-4 font-medium`}
         >
           <li>
-            <Link href="/adopt" className="px-2 py-1 block hover:text-gray-500">
+            <Link href="/404" className="px-2 py-1 block hover:text-gray-500">
               Adopt
             </Link>
           </li>
           <li>
-            <Link href="/help" className="px-2 py-1 block hover:text-gray-500">
+            <Link href="/404" className="px-2 py-1 block hover:text-gray-500">
               Ways to help
             </Link>
           </li>
           <li>
-            <Link
-              href="/services"
-              className="px-2 py-1 block hover:text-gray-500"
-            >
+            <Link href="/404" className="px-2 py-1 block hover:text-gray-500">
               Programs & Services
             </Link>
           </li>
           <li>
-            <Link
-              href="/events"
-              className="px-2 py-1 block hover:text-gray-500"
-            >
+            <Link href="/404" className="px-2 py-1 block hover:text-gray-500">
               News & Events
             </Link>
           </li>
         </ul>
         <SearchBar width="w-36" />
-        <Button label="Donate" />
+        <Link href="/donation">
+          <Button label="Donate" />
+        </Link>
       </nav>
     </header>
   );
