@@ -55,10 +55,10 @@ const CardBox = ({
             <div className={classNames(
             'flex flex-row justify-start',
             )}>
-              <Button hoverBg="hover:bg-primary-light" label={data.btn}/>
+              <Button bgColor="bg-primary" textColor="text-white" hoverBg="hover:bg-primary-light" label={data.btn}/>
             </div>
           </div>
-        ))}
+        ))} 
       </div>
     </div>
   )
