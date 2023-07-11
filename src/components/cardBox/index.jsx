@@ -1,7 +1,6 @@
 import Image from "next/image";
 import classNames from "classnames";
-import dogImage from "../../../public/assets/images/Group 31.png";
-import arrowIcon from "../../../public/assets/icons/right-arrow.png";
+import dogImage from "../../../public/assets/images/dog-cardBox.png";
 import Link from "next/link";
 import Button from "../common/button";
 
@@ -42,9 +41,11 @@ const CardBox = ({ cardData, cardBgColor, textSize, textColor }) => {
               </h3>
             </div>
             <p className="h-24 pt-5 text-left">{data.desc}</p>
-            <div className={classNames("flex flex-row justify-start")}>
-              <Button hoverBg="hover:bg-primary-light" label={data.btn} />
-            </div>
+            <Link href="/404">
+              <div className={classNames("flex flex-row justify-start")}>
+                <Button hoverBg="hover:bg-primary-light" label={data.btn} />
+              </div>
+            </Link>
           </div>
         ))}
       </div>
