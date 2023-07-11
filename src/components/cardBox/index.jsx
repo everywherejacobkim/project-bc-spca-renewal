@@ -37,13 +37,15 @@ const CardBox = ({
                 
               )
             }>
+              <div className="w-23">
                <Image
                   src={data.imgUrl}
                   alt='icon'
-                  width='auto'
-                  height='auto'
+                  width={23}
+                  height={23}
                   layout={"cover"}               
                 />
+              </div>
               <h3 className={classNames(
                 'pl-4 leading-9',
                 textSize='text-xl')}>

@@ -7,7 +7,8 @@ const DonationBox = (props) => {
 
     const [button1Disabled, setButton1Disabled] = useState(false);
     const [button2Disabled, setButton2Disabled] = useState(false);
-
+    const [colorChange, setColorChange] = useState(false);
+    
     const handleButton1Click = () => {
     setButton1Disabled(true);
     setButton2Disabled(false);
@@ -25,8 +26,8 @@ const DonationBox = (props) => {
                 <h3 className='text-left text-2xl font-semibold mb-10'>Donation Detail</h3>
                 <p>Do you want to make this a montly gift?</p>
                 <div className='grid grid-cols-2 gap-5 mt-4 mb-8' >
-                    <Button onClick={handleButton1Click} disabled={button1Disabled} label='Donate one time' bgColor='bg-gray-40' textColor='text-gray-60' width="w-full" />
-                    <Button onClick={handleButton1Click} disabled={button1Disabled} label='Donate Montly'   bgColor='bg-gray-40' textColor='text-gray-60' width="w-full" />
+                    <Button onClick={handleButton1Click} disabled={button1Disabled} label='Donate one time' bgColor='bg-gray-40' textColor='text-gray-60' width="w-full"  />
+                    <Button onClick={handleButton1Click} disabled={button1Disabled} label='Donate Montly'   bgColor='bg-gray-40' textColor='text-gray-60' width="w-full"  />
                 </div>
                 <p className='text-left mb-4'>Who is making this donation?</p>
                 <div className='grid grid-cols-2 gap-5 mt-4 mb-8' >
