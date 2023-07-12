@@ -32,7 +32,7 @@ const SubscribeForm = ({
     <form
       onSubmit={handleSubmit}
       className={classNames(
-        "w-full px-4 py-8 md:flex md:justify-center md:items-center md:gap-2 md:px-36",
+        "w-full px-4 py-8 md:flex md:justify-center md:items-center md:gap-2 md:px-52 lg:px-64",
         bgColor || "bg-gray-20"
       )}
     >

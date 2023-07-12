@@ -18,7 +18,7 @@ const CardBox = ({ cardData, cardBgColor, textSize, textColor }) => {
           <div
             key={index}
             className={classNames(
-              "border-2 p-5 rounded-3xl w-full md:w-1/2 lg:w-1/3 xl:w-1/4 hover:bg-light-blue",
+              "border-2 p-5 rounded-3xl w-[296px] h-[232px] hover:bg-light-blue",
               cardBgColor
             )}
           >
