@@ -12,8 +12,8 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-primary text-white px-4 sm:px-16 py-8 md:pt-16 md:pb-8">
-      <div className="max-w-6xl mx-auto flex flex-wrap justify-center mb-8">
-        <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 md:mb-0">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-center mb-8 md:px-16 lg:px-2">
+        <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
           <Image src={LogoWhite} alt="Logo" />
           <p className="my-3 text-xs pr-6">
             Our mission is to protect and enhance the quality of life for
@@ -28,7 +28,7 @@ const Footer = () => {
             <FaPinterestSquare className="text-2xl" />
           </div>
         </div>
-        <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 md:mb-0">
+        <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
           <h2 className="text-xl font-bold mb-4">BC SPCA</h2>
           <ul className="list-unstyled">
             <li>
@@ -45,7 +45,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 md:mb-0">
+        <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
           <h2 className="text-xl font-bold mb-4">Find a friend</h2>
           <ul className="list-unstyled">
             <li>
@@ -62,7 +62,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full md:w-1/2 lg:w-1/4 px-4">
+        <div className="w-full md:w-1/4 px-4">
           <h2 className="text-xl font-bold mb-4">Stay in Touch</h2>
           <ul className="list-unstyled">
             <li>
@@ -77,7 +77,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col justify-center md:w-2/3 md:mx-auto">
+      <div className="flex flex-col justify-center md:w-4/5 md:px-2 md:mx-auto lg:w-2/3 lg:px-6">
         <div className="px-4 mb-4">
           <hr className="border-white" />
         </div>

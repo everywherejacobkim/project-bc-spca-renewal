@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div className="my-8">
             <ImageList images={menuImages} />
-            <div className="mx-8 my-8">
+            <div className="md:-mx-4 lg:mx-56 my-8">
               <LocationSearchBar label="Find Volunteer Opportunities by Location" placeholder="Enter your location" width="w-2/3" />
             </div>
           </div>

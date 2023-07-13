@@ -26,40 +26,39 @@ const CardBox = ({
       <h2 className='text-4xl text-center pb-8 font-bold'>How you can give to animals</h2>
       <div className="flex flex-row flex-wrap justify-center gap-6  mx-2 ">
         {cardData.map((data, index) => (
-          <div key={index} className={classNames(
-            'border-2 p-5 rounded-3xl w-full md:w-1/2 lg:w-1/3 xl:w-1/4 hover:bg-light-blue',
-            cardBgColor 
-            )}>
-             
-            <div className={
-              classNames(
-                "flex justify-start",
-                
-              )
-            }>
-              <div className="w-23">
-               <Image
-                  src={data.imgUrl}
-                  alt='icon'
-                  width={23}
-                  height={23}
-                  layout={"cover"}               
-                />
-              </div>
-              <h3 className={classNames(
-                'pl-4 leading-9',
-                textSize='text-xl')}>
-                 {data.title}
-                
-              </h3>               
+          <div
+            key={index}
+            className={classNames(
+              "border-2 p-5 rounded-3xl w-full md:w-1/2 lg:w-1/3 xl:w-1/4 hover:bg-light-blue",
+              cardBgColor
+            )}
+          >
+            <div className={classNames("flex justify-start items-center")}>
+              <Image
+                src={data.imgUrl}
+                alt="icon"
+                width={20}
+                height={20}
+                className="h-5"
+              />
+              <h3
+                className={classNames(
+                  "pl-3 leading-9 font-semibold",
+                  textSize || "text-xl",
+                  textColor || "text-black"
+                )}
+              >
+                {data.title}
+              </h3>
             </div>
-            <p className='h-24 pt-5 text-left'>{data.desc}</p>
-            <div className={classNames(
-            'flex flex-row justify-start',
-            )}>
+            <p className="h-24 pt-5 text-left">{data.desc}</p>
+            <Link href="/404">
+              <div className={classNames("flex flex-row justify-start")}>
               <Button bgColor="bg-primary" textColor="text-white" hoverBg="hover:bg-primary-light" label={data.btn}/>
+              </div>
+            </Link>
+                 
             </div>
-          </div>
         ))} 
       </div>
     </div>
