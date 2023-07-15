@@ -7,14 +7,14 @@ import ProgressBar from '../../ProgressBar';
 
 const DonationImage = () => {
     return (
-        <div className='w-1/3 border-2 my-32 rounded-[30px] '>
+        <div className='lg:w-1/3 border-2 lg:my-32 rounded-[30px] sm:w-full sm:my-0 '>
             <div>
                 <div>
                     <Image 
                     src={DonationImg}
                     alt='donation Image'
                     width="w-full"
-                    
+                    layout="cover"
                     />
                 </div>
                 <div className='px-8 mx-auto my-8'>

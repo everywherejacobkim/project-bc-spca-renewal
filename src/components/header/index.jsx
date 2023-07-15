@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -12,6 +12,11 @@ const Header = () => {
   const toggleMenu = () => {
     setIsExpanded(!isExpanded);
   };
+
+  
+  
+
+  
 
   return (
     <header className="bg-white p-4">
@@ -56,9 +61,10 @@ const Header = () => {
           </li>
         </ul>
         <SearchBar width="w-36" />
-        <Link href="/donation">
+       
+           <Link href="/donation">
           <Button label="Donate" />
-        </Link>
+          </Link>
       </nav>
     </header>
   );

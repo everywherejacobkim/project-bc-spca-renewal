@@ -68,23 +68,11 @@ const Index = () => {
       {/* Mount your component here */}
       
     <Hero title="Your Gift Can Save Many Lifes" desc="The BC SPCA offered life-saving work on behalf of animals in need and expanded its outreach services to help pet guardians who needed extra support to care for their animals."
-      fontColor='text-white' titleSize="text-5xl" descSize="text-lg"
+      fontColor='text-white'
     />
-    <div className="flex gap-5 mx-[156px]">
+    <div className="lg:flex lg:flex-row lg:gap-5 lg:mx-[156px] sm:flex-col sm:mx-0">
       {renderComponent()}
-           {/* {isComponentA ?(
-      <DonationBox onClick={handleComponentAClick} />
-     ): isComponentB ? (
-        <DonationInfo onClick={handleComponentBClick} />
-     ):(
-      <PaymentInfo />
-     )} */}
-    {/* {component ? (
-     <DonationBox  onClick={handleButtonClick}/>
-       )  :(
-        <DonationInfo onClick={handleButtonClick} /> 
-      )
-    } */}
+          
       <DonationImage />
     </div>
       <Footer />
