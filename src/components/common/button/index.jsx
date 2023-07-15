@@ -11,13 +11,16 @@ const Button = ({
   padding,
   border,
   hoverBg,
+  activeBg,
   borderColor,
   className,
+  button1Disabled,
+  button2Disabled,
 }) => {
   return (
     <button
       className={classNames(
-        "hidden md:block px-4 py-2 rounded-full text-sm font-semibold",
+        "md:block px-4 py-2 rounded-full text-sm font-semibold",
         bgColor || "bg-primary",
         textColor || "text-white",
         width || "w-32",
@@ -25,10 +28,14 @@ const Button = ({
         padding || "px-4",
         border,
         hoverBg,
+        activeBg,
         borderColor,
+        button1Disabled ? "bg-primary" : bgColor,
+        button2Disabled ? "bg-primary" : bgColor,
         className
       )}
       onClick={onClick}
+      disabled={button1Disabled}
     >
       {label}
     </button>

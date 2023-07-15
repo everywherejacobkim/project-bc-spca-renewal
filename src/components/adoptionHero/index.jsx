@@ -9,8 +9,6 @@ import classNames from 'classnames'
 const Hero = ({
     title,
     desc,
-    titleSize,
-    descSize,
     fontColor,
 }) => {
     return (
@@ -20,24 +18,19 @@ const Hero = ({
                 src={adoptionDog}
                 alt="adoptionHero"
                 width="100vw"
-                height="100vh"
                 layout="responsive"
-                objectFit="cover"
-                objectPosition="center"
                 />
                 <h1 className={classNames(
-                    'absolute top-40 left-10 w-[403px]',
-                    titleSize, fontColor
+                    'absolute lg:top-52 left-10 w-[403px] sm:text-3xl sm:top-20 lg:text-5xl',
+                    fontColor
                 )}>{title}</h1>
                 <p className={classNames(
-                    'absolute top-80 left-10 w-1/2',
-                    descSize,
+                    'absolute lg:top-[333px] left-10 w-1/2 sm:text-sm sm:top-40 lg:text-xl',
                     fontColor
                 )}>{desc}</p>
             </div>
             <div className='flex justify-center mx-36 m-auto border-2 gap-2'>
-                {/* <DonationBox />
-                <DonationImage /> */}
+
             </div>
         </div>
     );
