@@ -16,6 +16,11 @@ const Button = ({
   className,
   button1Disabled,
   button2Disabled,
+  active,
+  setActive,
+  selected,
+  setSelected,
+
 }) => {
   return (
     <button
@@ -30,12 +35,17 @@ const Button = ({
         hoverBg,
         activeBg,
         borderColor,
-        button1Disabled ? "bg-primary" : bgColor,
-        button2Disabled ? "bg-primary" : bgColor,
+        
+        selected === "Donate one time" ? "bg-primary" : bgColor,
+        // active === true ? "bg-primary" : bgColor,
+        // active === true ? "text-white" : textColor,
+        // button2Disabled ? "bg-primary" : bgColor,
+        
         className
       )}
       onClick={onClick}
-      disabled={button1Disabled}
+      // disabled={button1Disabled}
+      selected={selected}
     >
       {label}
     </button>
