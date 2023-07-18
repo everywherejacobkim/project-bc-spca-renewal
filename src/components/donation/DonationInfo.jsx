@@ -12,9 +12,7 @@ const DonationInfo = ({ componentStack, onClick, onButtonClick }) => {
         </div>
         <div>
           <form className="grid grid-cols-2 gap-3 mx-auto text-gray-80">
-            {/* <div className='flex'> */}
-
-            <input
+                       <input
               className="border-2 h-10 rounded-full pl-5"
               type="text"
               placeholder="first name"

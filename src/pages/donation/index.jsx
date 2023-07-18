@@ -5,7 +5,6 @@ import DonationBox from "@/components/donation/donationBox";
 import DonationImage from "@/components/donation/donationImage/DonationImage";
 import { useState } from 'react';
 import DonationInfo from "@/components/donation/DonationInfo";
-import PaymentInfo from "@/components/donation/PaymentInfo";
 import { checkout } from "../../../checkout"
 
 const Index = () => {
@@ -48,9 +47,7 @@ const Index = () => {
   };
   return (
     <div>
-      <Header />
-      {/* Mount your component here */}
-      
+      <Header />      
     <Hero title="Your Gift Can Save Many Lifes" desc="The BC SPCA offered life-saving work on behalf of animals in need and expanded its outreach services to help pet guardians who needed extra support to care for their animals."
       fontColor='text-white'
     />

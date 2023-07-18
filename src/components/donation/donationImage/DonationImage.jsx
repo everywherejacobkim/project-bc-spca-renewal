@@ -18,7 +18,6 @@ const DonationImage = () => {
                         width:'100%',
                         borderRadius:'4% 4% 0 0',
                     }}
-                    layout="cover"
                     />
                 </div>
                 <div className='px-8 mx-auto my-8'>

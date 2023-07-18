@@ -3,16 +3,8 @@ import Link from "next/link";
 import React from "react";
 import classNames from "classnames";
 
-const StoryCard = ({ storiesData, textSize, textColor, cardBgColor }) => {
-  function CovertDate() {
-    let date = new Date(storiesData.date);
-    console.log(date);
-    /* Date format you have */
-    let dateMDY = `${date.getDate()}-${
-      date.getMonth() + 1
-    }-${date.getFullYear()}`;
-    /* Date converted to MM-DD-YYYY format */
-  }
+const StoryCard = ({ textSize, storiesData, cardBgColor }) => {
+ 
   return (
     <div className="flex flex-col mx-8 md:px-28 md:mb-28">
       <h3 className="text-4xl lg:mx-20 sm:mx-0 mb-8 mt-12 md:mb-16 md:mt-24 font-semibold md:text-center">
@@ -30,9 +22,7 @@ const StoryCard = ({ storiesData, textSize, textColor, cardBgColor }) => {
             <Image
               src={story.imgUrl}
               alt="adption image"
-              className="rounded-t-3xl"
-              // width='fill'
-              // height={200}
+              className="rounded-t-2xl"
               layout="responsive"
             />
             <div className="p-6">
