@@ -13,20 +13,20 @@ const CardBox = ({
 
   
   return (
-    <div className='py-8 mx-32'>
+    <div className='py-8 mx-32 sm:mx-14'>
       <div className="flex flex-row justify-center">
         <Image
           src={dogImage}
           alt='dog image'
         />
       </div>
-      <h2 className='text-4xl text-center pb-8 font-bold sm:px-12'>How you can give to animals</h2>
-      <div className="grid sm:grid-cols-1 sm:gap-6 md:grid-cols-3 justify-center  ">
+      <h2 className='text-4xl text-center pb-8 font-bold sm:px-0'>How you can give to animals</h2>
+      <div className="grid sm:grid-cols-1 gap-6 md:grid-cols-3 md:mx-56 justify-center  ">
         {cardData.map((data, index) => (
           <div
             key={index}
             className={classNames(
-              "border-2 p-5 rounded-3xl w-[296px] h-[232px] hover:bg-light-blue justify-self-center",
+              "border-2 rounded-3xl p-6 hover:bg-light-blue justify-self-center",
               cardBgColor
             )}
           >

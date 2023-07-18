@@ -33,9 +33,11 @@ const DonationBox = (props) => {
   };
 
     return (
-        <div className='border-2 w-2/3 shadow-lg flex flex-col  rounded-[30px] my-32 mx-auto px-12 sm:w-full'>
+
+        <div className='border-2 md:w-2/3 flex flex-col  rounded-[30px] shadow-lg md:my-32 md:mx-auto md:px-12 sm:w-full sm:my-14'>
+
             {/*question props*/}
-            <div className='mx-auto my-14 drop-shadow-none'>
+            <div className='mx-auto my-14 '>
                 <h3 className='text-left text-2xl font-semibold mb-10'>Donation Detail</h3>
                 <p>Do you want to make this a montly gift?</p>
                 <div className='grid grid-cols-2 gap-5 mt-4 mb-8' >
