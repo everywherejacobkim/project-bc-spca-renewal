@@ -3,7 +3,7 @@ import Button from "../common/button";
 
 const DonationInfo = ({ componentStack, onClick, onButtonClick }) => {
   return (
-    <div className="border-2 w-2/3 flex flex-col  rounded-[30px] my-32 mx-auto px-12 sm:w-full">
+    <div className="w-full border-2 flex flex-col  rounded-[30px] my-12 mx-auto px-12 md:my-32 md:w-2/3 lg:w-2/3">
       <div className="drop-shadow-none">
         <div className="mb-14 my-14">
           <h3 className="text-left text-2xl font-semibold">

@@ -11,16 +11,7 @@ import { checkout } from "../../../checkout"
 const Index = () => {
 
  
-  // const [isComponentA, setIsComponentA] = useState(true);
-  // const [isComponentB, setIsComponentB] = useState(false);
-
-  // const handleComponentAClick = () => {
-  //   setIsComponentA(false);
-  //   setIsComponentB(true);
-  // };
-  // const handleComponentBClick = () => {
-  //   setIsComponentB(false);
-  // };
+  
   const [componentStack, setComponentStack] = useState([]);
   const [currentComponent, setCurrentComponent] = useState('ComponentA');
 
@@ -29,10 +20,7 @@ const Index = () => {
     setCurrentComponent('ComponentB');
   };
 
-  // const handleComponentBClick = () => {
-  //   setComponentStack([...componentStack, 'ComponentB']);
-  //   setCurrentComponent('ComponentC');
-  // };
+
 
   const handleBackButtonClick = () => {
     const previousComponent = componentStack.pop();
@@ -55,11 +43,7 @@ const Index = () => {
               ]
             })
          } )} onButtonClick={handleBackButtonClick} />;
-      // case 'ComponentC':
-       
-      // return 
-      // default:
-      //   return null;
+      
     }
   };
   return (
@@ -70,7 +54,7 @@ const Index = () => {
     <Hero title="Your Gift Can Save Many Lifes" desc="The BC SPCA offered life-saving work on behalf of animals in need and expanded its outreach services to help pet guardians who needed extra support to care for their animals."
       fontColor='text-white'
     />
-    <div className="lg:flex lg:flex-row lg:gap-5 lg:mx-[156px] sm:flex-col sm:mx-0">
+    <div className=" flex-col mx-0 md:flex md:flex-row md:gap-3 md:mx-10 lg:flex lg:flex-row lg:gap-5 lg:mx-[156px]">
       {renderComponent()}
           
       <DonationImage />
