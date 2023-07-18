@@ -91,7 +91,7 @@ const SearchMap = () => {
   const [searchValue, setSearchValue] = useState("");
   return (
     <>
-      <div className="flex flex-col-reverse lg:flex-row justify-center lg:gap-8">
+      <div className="flex flex-col-reverse md:flex-row justify-center md: gap-4 lg:gap-8">
         <div className="flex flex-col gap-10 mt-4">
           <span className="flex justify-between items-center font-semibold">
             <Link href="/">
