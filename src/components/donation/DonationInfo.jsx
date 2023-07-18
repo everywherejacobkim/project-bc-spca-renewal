@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../common/button";
 
-const DonationInfo = ({ componentStack, onClick, onButtonClick }) => {
+const DonationInfo = ({ onClick, onButtonClick }) => {
   return (
     <div className="w-full border-2 flex flex-col  rounded-[30px] my-12 mx-auto px-12 md:my-32 md:w-2/3 lg:w-2/3">
       <div className="drop-shadow-none">
@@ -12,7 +12,7 @@ const DonationInfo = ({ componentStack, onClick, onButtonClick }) => {
         </div>
         <div>
           <form className="grid grid-cols-2 gap-3 mx-auto text-gray-80">
-                       <input
+            <input
               className="border-2 h-10 rounded-full pl-5"
               type="text"
               placeholder="first name"
@@ -22,7 +22,6 @@ const DonationInfo = ({ componentStack, onClick, onButtonClick }) => {
               type="text"
               placeholder="last name"
             ></input>
-            {/* </div>   is there any good other way?  */}
             <input
               className="border-2 h-10 rounded-full pl-5 sm:col-span-2"
               type="text"
