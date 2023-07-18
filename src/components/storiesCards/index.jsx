@@ -15,15 +15,15 @@ const StoryCard = ({ storiesData, textSize, textColor, cardBgColor }) => {
   }
   return (
     <div className="flex flex-col mx-8 md:px-28 md:mb-28">
-      <h3 className="text-4xl mx-20 mb-8 mt-12 md:mb-16 md:mt-24 font-semibold md:text-center">
+      <h3 className="text-4xl lg:mx-20 sm:mx-0 mb-8 mt-12 md:mb-16 md:mt-24 font-semibold md:text-center">
         Adoption Stories
       </h3>
-      <div className="flex flex-col md:flex-row md:justify-center md:gap-6">
+      <div className="md:flex sm:block md:justify-center md:gap-6">
         {storiesData.map((story, index) => (
           <div
             key={index}
             className={classNames(
-              "mb-8 md:mb-0 md:w-1/2 lg:w-1/3 xl:w-5/12 text-left border-2 rounded-3xl relative w-[456px]",
+              "mb-8 md:mb-0 text-left border-2 rounded-3xl relative ",
               cardBgColor
             )}
           >

@@ -8,35 +8,46 @@ const DonationBox = (props) => {
     const [button1Disabled, setButton1Disabled] = useState(false);
     const [button2Disabled, setButton2Disabled] = useState(false);
     const [active, setActive] = useState(false);
+    const [selected, setSelected] = useState("");
 
-    const handleButton1Click = () => {
-    setButton1Disabled(true);
-    setButton2Disabled(false);
-    setActive(!active)
+
+    const handleButton1Click = (e) => {
+    // setButton1Disabled(true);
+    // setButton2Disabled(false);
+     setSelected("Donate one time")
+     setActive(!active)
+
+   
   };
+  console.log(selected)
+    
 
     const handleButton2Click = () => {
-    setButton1Disabled(false);
-    setButton2Disabled(true);
-    setActive(active)
+    // setButton1Disabled(false);
+    // setButton2Disabled(true);
+    setSelected("Donation Montly")
+    setActive(!active)
+    
     // setBgColorChange("bg-primary");
     // setFontColorChange("text-white")
   };
 
     return (
-        <div className='border-2 w-2/3 flex flex-col  rounded-[30px] drop-shadow-lg my-32 mx-auto px-12 sm:w-full'>
+
+        <div className='border-2 md:w-2/3 flex flex-col  rounded-[30px] shadow-lg md:my-32 md:mx-auto md:px-12 sm:w-full sm:my-14'>
+
             {/*question props*/}
-            <div className='mx-auto my-14 drop-shadow-none'>
+            <div className='mx-auto my-14 '>
                 <h3 className='text-left text-2xl font-semibold mb-10'>Donation Detail</h3>
                 <p>Do you want to make this a montly gift?</p>
                 <div className='grid grid-cols-2 gap-5 mt-4 mb-8' >
-                    <Button onClick={handleButton1Click} button1Disabled={button1Disabled} label='Donate one time' hoverBg="hover:bg-primary-light hover:text-white" bgColor="bg-gray-40" width="w-full" textColor="text-gray-60"  />
-                    <Button onClick={handleButton2Click} button2Disabled={button2Disabled} label='Donate Montly'   hoverBg="hover:bg-primary-light hover:text-white"  bgColor="bg-gray-40" width="w-full" textColor="text-gray-60" />
+                    <Button onClick={handleButton1Click} selected={selected} setSelected={setSelected} label='Donate one time' hoverBg="hover:bg-primary-light hover:text-white" bgColor="bg-gray-40" width="w-full" textColor="text-gray-60"  active={active} setActive={setActive} />
+                    <Button onClick={handleButton2Click} selected={selected} setSelected={setSelected} label='Donate Montly'   hoverBg="hover:bg-primary-light hover:text-white"  bgColor="bg-gray-40" width="w-full" textColor="text-gray-60" active={active} setActive={setActive}/>
                 </div>
                 <p className='text-left mb-4'>Who is making this donation?</p>
                 <div className='grid grid-cols-2 gap-5 mt-4 mb-8' >
                     <Button onClick={handleButton1Click} button1Disabled={button1Disabled} label='Individual' textColor='text-gray-60' width="w-full"  bgColor='bg-gray-40'   />
-                    <Button  onClick={handleButton2Click} button2Disabled={button2Disabled} label='Organization' textColor='text-gray-60' width="w-full"   bgColor='bg-gray-40'  />
+                    <Button onClick={handleButton2Click} button2Disabled={button2Disabled} label='Organization' textColor='text-gray-60' width="w-full"   bgColor='bg-gray-40'  />
                 </div>
                 <p>Select your amount</p>
                 <div className='grid grid-cols-2 gap-5  mt-4 mb-8'>
