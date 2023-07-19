@@ -15,7 +15,7 @@ const Hero = ({ title, desc, fontColor }) => {
         />
         <h1
           className={classNames(
-            "absolute md:top-40 lg:top-52 left-10 w-[403px] text-3xl top-20 md:text-4xl lg:text-5xl",
+            "absolute font-bold md:top-40 lg:top-52 left-10 w-[403px] text-3xl top-20 md:text-4xl lg:text-5xl",
             fontColor
           )}
         >

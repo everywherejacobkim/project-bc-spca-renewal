@@ -43,7 +43,7 @@ const DonationBox = (props) => {
             onClick={handleButton2Click}
             selected={selected}
             setSelected={setSelected}
-            label="Donate Montly"
+            label="Donate Monthly"
             hoverBg="hover:bg-primary-light hover:text-white"
             bgColor="bg-gray-40"
             width="w-full"

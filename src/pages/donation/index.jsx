@@ -54,7 +54,6 @@ const Index = () => {
       />
       <div className=" flex-col mx-0 md:flex md:flex-row md:gap-3 md:mx-10 lg:flex lg:flex-row lg:gap-5 lg:mx-[156px]">
         {renderComponent()}
-
         <DonationImage />
       </div>
       <Footer />
