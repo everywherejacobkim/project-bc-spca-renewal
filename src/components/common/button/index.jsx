@@ -29,7 +29,7 @@ const Button = ({
         hoverBg,
         activeBg,
         borderColor,
-        selected === "Donate one time" ? "bg-primary" : bgColor,
+        selected,
         className
       )}
       onClick={onClick}
