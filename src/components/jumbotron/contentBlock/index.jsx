@@ -16,11 +16,13 @@ export const ContentBlockA = ({
   return (
     <div
       className={classNames(
-        "md:w-1/2 text-left mt-[-10%]",
+        "md:w-1/2 text-left mt-[-10%] mx-2",
         fontColor || "text-black"
       )}
     >
-      <h1 className="text-4xl tracking-wide font-bold mb-4">{title}</h1>
+      <h1 className="w-3/5 md:w-full text-4xl tracking-wide font-bold mb-4">
+        {title}
+      </h1>
       <p className="text-lg">{description}</p>
       <Link href={`${btnLink}`}>
         <button
