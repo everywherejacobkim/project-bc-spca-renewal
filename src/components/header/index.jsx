@@ -125,9 +125,11 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <Link href="/donation">
-          <Button label="Donate" className="ml-8" />
-        </Link>
+        <div className="hidden md:block">
+          <Link href="/donation">
+            <Button label="Donate" className="ml-8" />
+          </Link>
+        </div>
       </nav>
     </header>
   );

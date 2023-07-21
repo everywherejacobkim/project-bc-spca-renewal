@@ -52,8 +52,10 @@ export const ContentBlockB = ({
     <div
       className={classNames("md:w-2/3 text-center", fontColor || "text-white")}
     >
-      <h1 className="text-4xl tracking-wide font-bold my-8">{title}</h1>
-      <p className="text-lg my-6">{description}</p>
+      <h1 className="text-3xl md:text-4xl tracking-wide font-bold my-8">
+        {title}
+      </h1>
+      <p className="text-base md:text-lg my-6">{description}</p>
       <div className="flex justify-center">
         <Link href={`${btnLink}`}>
           <button

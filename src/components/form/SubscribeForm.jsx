@@ -53,11 +53,11 @@ const SubscribeForm = ({
             type="submit"
             className={classNames(
               "w-full text-base rounded-3xl py-2 mt-2 md:mt-0 md:w-36",
-              btnColor || "bg-black",
+              btnColor || "bg-primary",
               btnTextColor || "text-white"
             )}
           >
-            {isFormSubmitted && isValidEmail ? "Subscribed" : "SIGN UP"}
+            {isFormSubmitted && isValidEmail ? "Subscribed" : "Sign up"}
           </button>
         </div>
         <div className="m-2 w-full h-2">

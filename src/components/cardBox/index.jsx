@@ -1,26 +1,18 @@
 import Image from "next/image";
 import classNames from "classnames";
-import dogImage from '../../../public/assets/images/dog-cardBox.png'
+import dogImage from "../../../public/assets/images/dog-cardBox.png";
 import Link from "next/link";
 import Button from "../common/button";
 
-const CardBox = ({
-  cardData,
-  cardBgColor,
-  textSize,
-  textColor,
-}) => {
-
-  
+const CardBox = ({ cardData, cardBgColor, textSize, textColor }) => {
   return (
-    <div className='py-8 mx-32 sm:mx-14'>
+    <div className="py-8 mx-32 sm:mx-14">
       <div className="flex flex-row justify-center">
-        <Image
-          src={dogImage}
-          alt='dog image'
-        />
+        <Image src={dogImage} alt="dog image" />
       </div>
-      <h2 className='text-4xl text-center pb-8 font-bold sm:px-0'>How you can give to animals</h2>
+      <h2 className="text-3xl md:text-4xl text-center pt-8 pb-8 font-bold sm:px-0">
+        How you can give to animals
+      </h2>
       <div className="grid sm:grid-cols-1 gap-6 md:grid-cols-3 md:mx-56 justify-center  ">
         {cardData.map((data, index) => (
           <div
@@ -51,16 +43,19 @@ const CardBox = ({
             <p className="h-24 pt-5 text-left">{data.desc}</p>
             <Link href="/404">
               <div className={classNames("flex flex-row justify-start")}>
-              <Button bgColor="bg-primary" textColor="text-white" hoverBg="hover:bg-primary-light" label={data.btn}/>
+                <Button
+                  bgColor="bg-primary"
+                  textColor="text-white"
+                  hoverBg="hover:bg-primary-light"
+                  label={data.btn}
+                />
               </div>
             </Link>
-                 
-            </div>
-        ))} 
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default CardBox;
-

@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white px-4 sm:px-16 py-8 md:pt-16 md:pb-8">
+    <footer className="bg-primary text-white px-4 py-8 md:pt-16 md:pb-8">
       <div className="max-w-6xl mx-auto flex flex-wrap justify-center mb-8 md:px-16 lg:px-2">
         <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
           <Image src={LogoWhite} alt="Logo" />
@@ -77,7 +77,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-col justify-center md:w-4/5 md:px-2 md:mx-auto lg:w-2/3 lg:px-6">
+      <div className="flex flex-col justify-center md:w-4/5 md:px-10 md:mx-auto lg:w-2/3 lg:px-14">
         <div className="px-4 mb-4">
           <hr className="border-white" />
         </div>
