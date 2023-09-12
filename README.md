@@ -24,9 +24,12 @@ The following are some of the key features that we plan to implement:
 - A donation system that allows visitors to donate to the BC SPCA securely and conveniently.
 
 
-## Project Timeline
+## Tech Stack
 
-The project is expected to be completed by the end of July, 2023. 
+- Next.js
+- React
+- Tailwind CSS
+- Framer Motion
 
 
 ## Conclusion
